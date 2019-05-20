@@ -1,0 +1,58 @@
+[
+  {
+    "plantID": 1,
+    "problem_solver_name": "Deer Resistant"
+  },
+  {
+    "plantID": 1,
+    "problem_solver_name": "Groundcover"
+  },
+  {
+    "plantID": 1,
+    "problem_solver_name": "Slope/Erosion Control"
+  },
+  {
+    "plantID": 1,
+    "problem_solver_name": "Rabbit Resistant"
+  },
+  {
+    "plantID": 1,
+    "problem_solver_name": "Drought tolerant"
+  },
+  {
+    "plantID": 2,
+    "problem_solver_name": "Drought tolerant"
+  },
+  {
+    "plantID": 3,
+    "problem_solver_name": "Humidity Tolerant"
+  },
+  {
+    "plantID": 3,
+    "problem_solver_name": "Tolerates foot traffic"
+  },
+  {
+    "plantID": 4,
+    "problem_solver_name": "Drought tolerant"
+  },
+  {
+    "plantID": 5,
+    "problem_solver_name": "Slope and Erosion Control"
+  },
+  {
+    "plantID": 5,
+    "problem_solver_name": "Drought tolerant"
+  },
+  {
+    "plantID": 5,
+    "problem_solver_name": "Rabbit Resistant"
+  },
+  {
+    "plantID": 5,
+    "problem_solver_name": "Deer Resistant"
+  },
+  {
+    "plantID": 7,
+    "problem_solver_name": "Drought tolerant"
+  }
+]
