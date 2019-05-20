@@ -12,18 +12,37 @@ class PlantViewController: UIViewController {
     
     public var newImage: UIImage!
     
-    @IBOutlet weak var imageView: UIImageView!
+    let section = ["Taxonomy", "General information", "Additional Information"]
     
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var botanicalNameLabel: UILabel!
+    
+    private var classifiedPlant : Plant!
+    private var db = Database()
     var classifiedString : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = newImage
-        print(classifiedString)
-        // Do any additional setup after loading the view.
+        
+        
+        for element in db.fetchJSON() {
+            if element.name == classifiedString.capitalized {
+                classifiedPlant = element
+            }
+        }
+        
+        updateUI()
     }
     
 
+    private func updateUI() {
+        imageView.image = newImage
+        nameLabel.text = classifiedPlant.name
+        botanicalNameLabel.text = classifiedPlant.botanicalName
+    }
+    
     /*
     // MARK: - Navigation
 

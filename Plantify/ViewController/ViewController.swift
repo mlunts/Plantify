@@ -14,12 +14,13 @@ import ImageIO
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var imageView: UIImageView!
     //    @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var classificationLabel: UILabel!
+//    @IBOutlet weak var classificationLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
+    
     var classifiedObject: String = ""
-    // MARK: - Image Classification
+    public var newImage: UIImage!
     
     override func viewDidLoad() {
         
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToPlant") {
             let vc = segue.destination as! PlantViewController
-            vc.newImage = imageView.image
+            vc.newImage = newImage
             vc.classifiedString = classifiedObject
         }
     }
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
     
     /// - Tag: PerformRequests
     func updateClassifications(for image: UIImage) {
-        classificationLabel.text = "Classifying..."
+     
         
         
         let orientation = CGImagePropertyOrientation(image.imageOrientation)
@@ -71,22 +72,17 @@ class ViewController: UIViewController {
     func processClassifications(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
             guard let results = request.results else {
-                self.classificationLabel.text = "Unable to classify image.\n\(error!.localizedDescription)"
                 return
             }
 
             let classifications = results as! [VNClassificationObservation]
             
             if classifications.isEmpty {
-                self.classificationLabel.text = "Nothing recognized."
+//                self.classificationLabel.text = "Nothing recognized."
             } else {
                
                 let topClassifications = classifications.prefix(1)
                 self.classifiedObject = topClassifications[0].identifier
-                let descriptions = topClassifications.map { classification in
-                    
-                    return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
-                }
                
                 self.performSegue(withIdentifier: "goToPlant", sender: nil)
             }
@@ -132,7 +128,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         picker.dismiss(animated: true)
         
         let image = info[.originalImage] as! UIImage
-        imageView.image = image
+        newImage = image
         updateClassifications(for: image)
     }
 }
