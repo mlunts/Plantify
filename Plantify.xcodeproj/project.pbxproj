@@ -17,6 +17,10 @@
 		9C26F4BF229318DF00BDEA59 /* Plant.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BC229318DF00BDEA59 /* Plant.json */; };
 		9C26F4C0229318DF00BDEA59 /* problemSolvers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BD229318DF00BDEA59 /* problemSolvers.json */; };
 		9C26F4C2229318E900BDEA59 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C1229318E900BDEA59 /* Database.swift */; };
+		9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C322931A9B00BDEA59 /* Plant.swift */; };
+		9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */; };
+		9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */; };
+		9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		9C26F4BC229318DF00BDEA59 /* Plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plant.json; sourceTree = "<group>"; };
 		9C26F4BD229318DF00BDEA59 /* problemSolvers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = problemSolvers.json; sourceTree = "<group>"; };
 		9C26F4C1229318E900BDEA59 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9C26F4C322931A9B00BDEA59 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsClassifier.mlmodel; sourceTree = "<group>"; };
+		9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
 		D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plantify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,17 +95,45 @@
 			isa = PBXGroup;
 			children = (
 				9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */,
-				9C26F4A9229316DC00BDEA59 /* ViewController.swift */,
 				9C26F4AB229316DC00BDEA59 /* Main.storyboard */,
+				9C26F4C922931B1300BDEA59 /* ViewController */,
+				9C26F4C722931AE100BDEA59 /* Model */,
+				9C26F4C822931AF800BDEA59 /* Resources */,
+				9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */,
+				9C26F4B3229316DD00BDEA59 /* Info.plist */,
+			);
+			path = Plantify;
+			sourceTree = "<group>";
+		};
+		9C26F4C722931AE100BDEA59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4C322931A9B00BDEA59 /* Plant.swift */,
+				9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C26F4C822931AF800BDEA59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				9C26F4C1229318E900BDEA59 /* Database.swift */,
 				9C26F4BB229318DF00BDEA59 /* generalUses.json */,
 				9C26F4BC229318DF00BDEA59 /* Plant.json */,
 				9C26F4BD229318DF00BDEA59 /* problemSolvers.json */,
 				9C26F4AE229316DD00BDEA59 /* Assets.xcassets */,
-				9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */,
-				9C26F4B3229316DD00BDEA59 /* Info.plist */,
 			);
-			path = Plantify;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C26F4C922931B1300BDEA59 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */,
+				9C26F4A9229316DC00BDEA59 /* ViewController.swift */,
+				9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */,
 				9C26F4C2229318E900BDEA59 /* Database.swift in Sources */,
+				9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */,
+				9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */,
 				9C26F4AA229316DC00BDEA59 /* ViewController.swift in Sources */,
+				9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */,
 				9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
