@@ -56,6 +56,10 @@
     "general_use_name": "Medicinal Herb"
   },
   {
+      "plantID": 8,
+      "general_use_name": "Medicinal Herb"
+  },
+  {
     "plantID": 4,
     "general_use_name": "Cosmetic Herb"
   },
@@ -84,6 +88,10 @@
     "general_use_name": "Medicinal Herb"
   },
   {
+      "plantID": 9,
+      "general_use_name": "Medicinal Herb"
+  },
+  {
     "plantID": 7,
     "general_use_name": "Herbal Tea"
   },
@@ -98,5 +106,9 @@
   {
     "plantID": 6,
     "general_use_name": "Herbal Tea"
+  },
+  {
+      "plantID": 8,
+      "general_use_name": "Medicinal Herb"
   }
 ]

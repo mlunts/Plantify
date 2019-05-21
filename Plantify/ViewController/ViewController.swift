@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 //    @IBOutlet weak var classificationLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
     
-    var classifiedObject: String = ""
+    private var classifiedObject: String = ""
     public var newImage: UIImage!
     
     override func viewDidLoad() {
@@ -51,9 +51,6 @@ class ViewController: UIViewController {
     
     /// - Tag: PerformRequests
     func updateClassifications(for image: UIImage) {
-     
-        
-        
         let orientation = CGImagePropertyOrientation(image.imageOrientation)
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
         

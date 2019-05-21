@@ -21,6 +21,7 @@
 		9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */; };
 		9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */; };
 		9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */; };
+		9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsClassifier.mlmodel; sourceTree = "<group>"; };
 		9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
+		9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxonomyTableViewCell.swift; sourceTree = "<group>"; };
 		D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plantify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */,
-				9C26F4AB229316DC00BDEA59 /* Main.storyboard */,
+				9C26F4CF22934A0400BDEA59 /* View */,
 				9C26F4C922931B1300BDEA59 /* ViewController */,
 				9C26F4C722931AE100BDEA59 /* Model */,
 				9C26F4C822931AF800BDEA59 /* Resources */,
@@ -134,6 +136,15 @@
 				9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C26F4CF22934A0400BDEA59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4AB229316DC00BDEA59 /* Main.storyboard */,
+				9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				9C26F4C2229318E900BDEA59 /* Database.swift in Sources */,
 				9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */,
 				9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */,
+				9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */,
 				9C26F4AA229316DC00BDEA59 /* ViewController.swift in Sources */,
 				9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */,
 				9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */,
