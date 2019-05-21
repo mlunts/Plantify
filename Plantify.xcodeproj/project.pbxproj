@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0042CB66097BC30CB9915A0F /* Pods_Plantify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */; };
 		9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */; };
 		9C26F4AA229316DC00BDEA59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4A9229316DC00BDEA59 /* ViewController.swift */; };
 		9C26F4AD229316DC00BDEA59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4AB229316DC00BDEA59 /* Main.storyboard */; };
 		9C26F4AF229316DD00BDEA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4AE229316DD00BDEA59 /* Assets.xcassets */; };
 		9C26F4B2229316DD00BDEA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */; };
+		9C26F4BE229318DF00BDEA59 /* generalUses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BB229318DF00BDEA59 /* generalUses.json */; };
+		9C26F4BF229318DF00BDEA59 /* Plant.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BC229318DF00BDEA59 /* Plant.json */; };
+		9C26F4C0229318DF00BDEA59 /* problemSolvers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BD229318DF00BDEA59 /* problemSolvers.json */; };
+		9C26F4C2229318E900BDEA59 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C1229318E900BDEA59 /* Database.swift */; };
+		9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C322931A9B00BDEA59 /* Plant.swift */; };
+		9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */; };
+		9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */; };
+		9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */; };
+		9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A1DE73DD628AD14E0E59CC /* Pods-Plantify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plantify/Pods-Plantify.debug.xcconfig"; sourceTree = "<group>"; };
+		143CB9CC0AD6801E8A37333E /* Pods-Plantify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plantify/Pods-Plantify.release.xcconfig"; sourceTree = "<group>"; };
 		9C26F4A4229316DC00BDEA59 /* Plantify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C26F4A9229316DC00BDEA59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,16 @@
 		9C26F4AE229316DD00BDEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C26F4B1229316DD00BDEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C26F4B3229316DD00BDEA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C26F4BB229318DF00BDEA59 /* generalUses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generalUses.json; sourceTree = "<group>"; };
+		9C26F4BC229318DF00BDEA59 /* Plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plant.json; sourceTree = "<group>"; };
+		9C26F4BD229318DF00BDEA59 /* problemSolvers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = problemSolvers.json; sourceTree = "<group>"; };
+		9C26F4C1229318E900BDEA59 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9C26F4C322931A9B00BDEA59 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsClassifier.mlmodel; sourceTree = "<group>"; };
+		9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
+		9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxonomyTableViewCell.swift; sourceTree = "<group>"; };
+		D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plantify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0042CB66097BC30CB9915A0F /* Pods_Plantify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B8A329C96FA458508632740 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12A1DE73DD628AD14E0E59CC /* Pods-Plantify.debug.xcconfig */,
+				143CB9CC0AD6801E8A37333E /* Pods-Plantify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C2D57DB1E6BDD3A415636BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C26F49B229316DC00BDEA59 = {
 			isa = PBXGroup;
 			children = (
 				9C26F4A6229316DC00BDEA59 /* Plantify */,
 				9C26F4A5229316DC00BDEA59 /* Products */,
+				5B8A329C96FA458508632740 /* Pods */,
+				6C2D57DB1E6BDD3A415636BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +97,54 @@
 			isa = PBXGroup;
 			children = (
 				9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */,
-				9C26F4A9229316DC00BDEA59 /* ViewController.swift */,
-				9C26F4AB229316DC00BDEA59 /* Main.storyboard */,
-				9C26F4AE229316DD00BDEA59 /* Assets.xcassets */,
+				9C26F4CF22934A0400BDEA59 /* View */,
+				9C26F4C922931B1300BDEA59 /* ViewController */,
+				9C26F4C722931AE100BDEA59 /* Model */,
+				9C26F4C822931AF800BDEA59 /* Resources */,
 				9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */,
 				9C26F4B3229316DD00BDEA59 /* Info.plist */,
 			);
 			path = Plantify;
+			sourceTree = "<group>";
+		};
+		9C26F4C722931AE100BDEA59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4C322931A9B00BDEA59 /* Plant.swift */,
+				9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C26F4C822931AF800BDEA59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4C1229318E900BDEA59 /* Database.swift */,
+				9C26F4BB229318DF00BDEA59 /* generalUses.json */,
+				9C26F4BC229318DF00BDEA59 /* Plant.json */,
+				9C26F4BD229318DF00BDEA59 /* problemSolvers.json */,
+				9C26F4AE229316DD00BDEA59 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C26F4C922931B1300BDEA59 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */,
+				9C26F4A9229316DC00BDEA59 /* ViewController.swift */,
+				9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C26F4CF22934A0400BDEA59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4AB229316DC00BDEA59 /* Main.storyboard */,
+				9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C26F4B6229316DD00BDEA59 /* Build configuration list for PBXNativeTarget "Plantify" */;
 			buildPhases = (
+				AAEF83BE43165A9502073927 /* [CP] Check Pods Manifest.lock */,
 				9C26F4A0229316DC00BDEA59 /* Sources */,
 				9C26F4A1229316DC00BDEA59 /* Frameworks */,
 				9C26F4A2229316DC00BDEA59 /* Resources */,
+				A5CED29914362B29BBDB62E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,18 +209,66 @@
 			files = (
 				9C26F4B2229316DD00BDEA59 /* LaunchScreen.storyboard in Resources */,
 				9C26F4AF229316DD00BDEA59 /* Assets.xcassets in Resources */,
+				9C26F4C0229318DF00BDEA59 /* problemSolvers.json in Resources */,
+				9C26F4BE229318DF00BDEA59 /* generalUses.json in Resources */,
 				9C26F4AD229316DC00BDEA59 /* Main.storyboard in Resources */,
+				9C26F4BF229318DF00BDEA59 /* Plant.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5CED29914362B29BBDB62E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Plantify/Pods-Plantify-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plantify/Pods-Plantify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAEF83BE43165A9502073927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plantify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C26F4A0229316DC00BDEA59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */,
+				9C26F4C2229318E900BDEA59 /* Database.swift in Sources */,
+				9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */,
+				9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */,
+				9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */,
 				9C26F4AA229316DC00BDEA59 /* ViewController.swift in Sources */,
+				9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */,
 				9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +413,7 @@
 		};
 		9C26F4B7229316DD00BDEA59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A1DE73DD628AD14E0E59CC /* Pods-Plantify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +432,7 @@
 		};
 		9C26F4B8229316DD00BDEA59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143CB9CC0AD6801E8A37333E /* Pods-Plantify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

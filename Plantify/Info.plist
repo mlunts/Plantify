@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription - 2</key>
+	<string>For you to shoot a photo for object recognition</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For you to select a photo for object recognition</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Takes pictures to demonstrate image recognition.</string>
 </dict>
 </plist>
