@@ -29,7 +29,7 @@ class Database {
                     plant.tribe = json[i]["tribe_name"].stringValue
                     plant.order = json[i]["order_name"].stringValue
                     plant.family = json[i]["family_name"].stringValue
-                    if json[i]["poisened"].intValue == 1 {
+                    if json[i]["poisoned"].intValue == 1 {
                         plant.poisoned = true
                     }
                     plants.append(plant)

@@ -20,7 +20,8 @@ class Plant: NSObject {
     var tribe: String
     var family: String
     var order: String
-    
+   
+   
     override init() {
         self.id = 0
         self.name = ""
@@ -34,4 +35,11 @@ class Plant: NSObject {
         self.flowerTime = ""
     }
     
+    func getTaxonomy() -> [Int : (String, String)] {
+        var taxonomy = [Int : (String, String)]()
+        taxonomy[0] = (self.order, "Order:")
+        taxonomy[1] = (self.family, "Family:")
+        taxonomy[2] = (self.tribe, "Tribe")
+        return taxonomy
+    }
 }
