@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Plantify-->
         <scene sceneID="Opd-nj-czH">
             <objects>
                 <viewController id="Oq0-nJ-Udt" customClass="ViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,18 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rc-y3-hVL">
-                                <rect key="frame" x="145" y="291" width="85" height="85"/>
+                                <rect key="frame" x="145" y="219" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="picture"/>
                                 <connections>
                                     <action selector="takePicture" destination="Oq0-nJ-Udt" eventType="touchUpInside" id="GLw-uX-K8P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make photo or upload photo to find out a plant!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlI-6B-821">
+                                <rect key="frame" x="72" y="146" width="231" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="zHJ-w9-efZ"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="HkH-me-n2q"/>
+                    <navigationItem key="navigationItem" title="Plantify" largeTitleDisplayMode="always" id="HkH-me-n2q"/>
                     <connections>
                         <outlet property="cameraButton" destination="4Rc-y3-hVL" id="HZN-tx-sxM"/>
                         <segue destination="fh3-TU-jl0" kind="show" identifier="goToPlant" id="Htd-0J-K5O"/>
