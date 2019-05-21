@@ -56,6 +56,10 @@
     "general_use_name": "Medicinal Herb"
   },
   {
+      "plantID": 8,
+      "general_use_name": "Medicinal Herb"
+  },
+  {
     "plantID": 4,
     "general_use_name": "Cosmetic Herb"
   },

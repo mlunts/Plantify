@@ -10,17 +10,18 @@ import SwiftyJSON
 
 class Database {
     
-    func fetchJSON() -> [Plant] {
+    public func fetchJSON() -> [Plant] {
         var plants = [Plant]()
         if let path = Bundle.main.path(forResource: "Plant", ofType: "json")
         {
-            do{
+            do {
                 let pathAsData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
                 let json = try JSON(data: pathAsData as Data)
                 
                 for i in 0...json.array!.count - 1  {
                     var plant = Plant()
                     //                    phrases.append(Phrase(text: json[type][i]["phrase"].stringValue))
+                    plant.id = json[i]["plantID"].intValue
                     plant.name = json[i]["plant_name"].stringValue
                     plant.botanicalName = json[i]["botanical_name"].stringValue
                     plant.information = json[i]["description"].stringValue
@@ -32,6 +33,12 @@ class Database {
                     if json[i]["poisoned"].intValue == 1 {
                         plant.poisoned = true
                     }
+                    if !getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id).isEmpty {
+                        plant.setGeneralUse(array: getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id))
+                    }
+                    if !getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id).isEmpty {
+                        plant.setProblemSolvers(array: getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id))
+                    }
                     plants.append(plant)
                 }
             } catch{
@@ -41,8 +48,33 @@ class Database {
         }
         
         return plants
-        
     }
+    
+    private func getArraysDataFromJSON(jsonFileName: String, plantId: Int) -> [String] {
+        var array = [String]()
+        guard let path = Bundle.main.path(forResource: jsonFileName, ofType: "json") else {
+            return []
+        }
+        do {
+            let pathAsData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+            let json = try JSON(data: pathAsData as Data)
+            
+            for i in 0...json.array!.count - 1  {
+                if json[i]["plantID"].intValue == plantId {
+                    if jsonFileName == "generalUses" {
+                        array.append(json[i]["general_use_name"].stringValue)
+                    } else if jsonFileName == "problemSolvers" {
+                        array.append(json[i]["problem_solver_name"].stringValue)
+                    }
+                }
+            }
+        } catch{
+            print("Some error")
+            return []
+        }
+        return array
+    }
+    
     
     
 }

@@ -10,22 +10,24 @@ import UIKit
 
 class PlantViewController: UIViewController {
     
-    public var newImage: UIImage!
-    
-    private var taxonomy = [Int : (String, String)]()
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var botanicalNameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var poisonLabel: UIImageView!
-    
+    @IBOutlet weak var generalUseKeyLabel: UILabel!
+    @IBOutlet weak var generalUseLabel: UILabel!
+    @IBOutlet weak var sideEffects: UILabel!
+ 
     @IBOutlet weak var taxonomyTable: UITableView!
     
     private var classifiedPlant : Plant!
+    
     private var db = Database()
+    private var taxonomy = [Int : (String, String)]()
+    
     var classifiedString : String = ""
+    public var newImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,19 +53,26 @@ class PlantViewController: UIViewController {
         } else {
              poisonLabel.isHidden = true
         }
+        if classifiedPlant.generalUse.isEmpty {
+            generalUseKeyLabel.isHidden = true
+            generalUseLabel.isHidden = true
+        } else {
+            generalUseKeyLabel.isHidden = false
+            generalUseLabel.isHidden = false
+            generalUseLabel.text = classifiedPlant.generalUse.joined(separator: "\n")
+        }
+        sideEffects.text = classifiedPlant.sideEffects
     }
-    
-    
-    
 }
 
 extension PlantViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == taxonomyTable {
             return 3
-        }
+        } 
         return 0
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == taxonomyTable {
@@ -74,6 +83,4 @@ extension PlantViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }
