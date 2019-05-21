@@ -22,7 +22,7 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var problemSolverUseLabel: UILabel!
     @IBOutlet weak var taxonomyTable: UITableView!
     
-    private var classifiedPlant : Plant!
+    public var classifiedPlant = Plant()
     
     private var db = Database()
     private var taxonomy = [Int : (String, String)]()
@@ -33,9 +33,11 @@ class PlantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for element in db.fetchJSON() {
-            if element.name == classifiedString.capitalized {
-                classifiedPlant = element
+        if classifiedPlant.isObjectEmpty() {
+            for element in db.fetchJSON() {
+                if element.name == classifiedString.capitalized {
+                    classifiedPlant = element
+                }
             }
         }
         taxonomy = classifiedPlant.getTaxonomy()
@@ -44,7 +46,11 @@ class PlantViewController: UIViewController {
     
     
     private func updateUI() {
-        imageView.image = newImage
+        if newImage != nil {
+            imageView.image = newImage
+        } else {
+            imageView.image = classifiedPlant.image
+        }
         nameLabel.text = classifiedPlant.name
         botanicalNameLabel.text = classifiedPlant.botanicalName
         infoLabel.text = classifiedPlant.information
