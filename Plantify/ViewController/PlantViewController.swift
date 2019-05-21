@@ -18,7 +18,8 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var generalUseKeyLabel: UILabel!
     @IBOutlet weak var generalUseLabel: UILabel!
     @IBOutlet weak var sideEffects: UILabel!
- 
+    @IBOutlet weak var problemSolverKeyUseLabel: UILabel!
+    @IBOutlet weak var problemSolverUseLabel: UILabel!
     @IBOutlet weak var taxonomyTable: UITableView!
     
     private var classifiedPlant : Plant!
@@ -51,7 +52,7 @@ class PlantViewController: UIViewController {
             poisonLabel.isHidden = false
             poisonLabel.tintColor = .red
         } else {
-             poisonLabel.isHidden = true
+            poisonLabel.isHidden = true
         }
         if classifiedPlant.generalUse.isEmpty {
             generalUseKeyLabel.isHidden = true
@@ -62,6 +63,14 @@ class PlantViewController: UIViewController {
             generalUseLabel.text = classifiedPlant.generalUse.joined(separator: "\n")
         }
         sideEffects.text = classifiedPlant.sideEffects
+        if classifiedPlant.problemSolvers.isEmpty {
+            problemSolverKeyUseLabel.isHidden = true
+            problemSolverUseLabel.isHidden = true
+        } else {
+            problemSolverKeyUseLabel.isHidden = false
+            problemSolverUseLabel.isHidden = false
+            problemSolverUseLabel.text = classifiedPlant.problemSolvers.joined(separator: "\n")
+        }
     }
 }
 
@@ -72,7 +81,7 @@ extension PlantViewController: UITableViewDelegate, UITableViewDataSource {
         } 
         return 0
     }
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == taxonomyTable {
