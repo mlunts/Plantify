@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import  UIKit
 
 class Plant: NSObject {
     
@@ -22,6 +23,7 @@ class Plant: NSObject {
     public var order: String
     public var generalUse = [String]()
     public var problemSolvers = [String]()
+    public var image: UIImage!
    
     override init() {
         self.id = 0
@@ -54,5 +56,13 @@ class Plant: NSObject {
         for element in array {
             problemSolvers.append(element)
         }
+    }
+    
+    public func setImage(imageName: String) {
+        self.image = UIImage(named: imageName)
+    }
+    
+    public func isObjectEmpty() -> Bool {
+        return (id == 0)
     }
 }
