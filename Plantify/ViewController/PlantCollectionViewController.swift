@@ -12,7 +12,7 @@ import UIKit
 
 class PlantCollectionViewController: UICollectionViewController {
     
-    private var db = Database()
+    private var db = DatabaseManager()
     private var plants = [Plant]()
     
     private let reuseIdentifier = "collectionCell"

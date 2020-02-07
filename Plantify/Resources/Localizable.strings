@@ -1,0 +1,25 @@
+"alertTitleOK" = "OK";
+"alertTitleRetry" = "Retry";
+"noTitleText" = "No title";
+"emptyString" = "";
+"cancelText" = "Cancel";
+
+// Error
+"errorOops" = "Oops!";
+"errorNoClassifiedFlower" = "Cannot identify the flower. Try again with another image.";
+
+// Homepage
+"homePageHeader" = "Hi friend,\nWhat flower do you see?";
+"homePageExploreHeader" = "Explore flowers";
+"homePageViewAll" = "View All"; 
+
+
+// Photo picker
+"takePhoto" = "Take Photo";
+"chooseFromLibrary" = "Choose From Library";
+
+// Family names
+"familyLiliaceae" = "Liliaceae";
+"familyAsteraceae" = "Asteraceae";
+"familyRosaceae" = "Rosaceae";
+"familyRanunculaceae" = "Ranunculaceae";

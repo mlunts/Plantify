@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4c-vK-f3A">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="RxI-i4-9h1">
+            <objects>
+                <viewController storyboardIdentifier="HomePageViewController" id="F4c-vK-f3A" customClass="HomePageViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfL-p3-fzq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-fl-Z0A">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="LB3-97-tQ1" kind="embed" id="zRt-Ne-qRI"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6by-6b-Y2d" firstAttribute="trailing" secondItem="fwk-fl-Z0A" secondAttribute="trailing" id="5TC-M5-aZe"/>
+                            <constraint firstItem="6by-6b-Y2d" firstAttribute="bottom" secondItem="fwk-fl-Z0A" secondAttribute="bottom" id="BNJ-dI-TLr"/>
+                            <constraint firstItem="fwk-fl-Z0A" firstAttribute="leading" secondItem="6by-6b-Y2d" secondAttribute="leading" id="C5T-KF-jHa"/>
+                            <constraint firstItem="fwk-fl-Z0A" firstAttribute="top" secondItem="6by-6b-Y2d" secondAttribute="top" id="XH5-pF-R3C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6by-6b-Y2d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBR-yv-dvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="92"/>
+        </scene>
+        <!--Home Page Table View Controller-->
+        <scene sceneID="s9O-tu-Z5R">
+            <objects>
+                <viewController id="LB3-97-tQ1" customClass="HomePageTableViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FrZ-xh-K9U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vek-i9-dUh">
+                                <rect key="frame" x="0.0" y="10" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LB3-97-tQ1" id="f1O-ee-h80"/>
+                                    <outlet property="delegate" destination="LB3-97-tQ1" id="zPs-iZ-A8L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vek-i9-dUh" firstAttribute="top" secondItem="FrZ-xh-K9U" secondAttribute="top" constant="10" id="8Ub-4t-CUc"/>
+                            <constraint firstItem="o5l-hp-m6X" firstAttribute="trailing" secondItem="Vek-i9-dUh" secondAttribute="trailing" symbolic="YES" id="J2J-X1-bA4"/>
+                            <constraint firstItem="Vek-i9-dUh" firstAttribute="leading" secondItem="o5l-hp-m6X" secondAttribute="leading" symbolic="YES" id="LnS-KN-BbI"/>
+                            <constraint firstItem="o5l-hp-m6X" firstAttribute="bottom" secondItem="Vek-i9-dUh" secondAttribute="bottom" symbolic="YES" id="wMl-rF-iJM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o5l-hp-m6X"/>
+                    </view>
+                    <connections>
+                        <outlet property="homePageTableView" destination="Vek-i9-dUh" id="9aY-Xv-gzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MU0-sy-cZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+</document>
