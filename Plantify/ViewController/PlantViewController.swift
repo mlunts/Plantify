@@ -24,7 +24,7 @@ class PlantViewController: UIViewController {
     
     public var classifiedPlant = Plant()
     
-    private var db = Database()
+    private var db = DatabaseManager()
     private var taxonomy = [Int : (String, String)]()
     
     var classifiedString : String = ""

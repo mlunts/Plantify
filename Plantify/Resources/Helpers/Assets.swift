@@ -18,13 +18,22 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let chestnutRose = ColorAsset(name: "chestnutRose")
+  internal static let deco = ColorAsset(name: "deco")
   internal static let mineralGreen = ColorAsset(name: "mineralGreen")
+  internal static let paarl = ColorAsset(name: "paarl")
   internal static let petiteOrchid = ColorAsset(name: "petiteOrchid")
   internal static let shadyLady = ColorAsset(name: "shadyLady")
+  internal static let shoking = ColorAsset(name: "shoking")
+  internal static let tumbleweed = ColorAsset(name: "tumbleweed")
   internal static let daisySlide12 = ImageAsset(name: "DaisySlide1-2")
   internal static let ranunculus = ImageAsset(name: "Ranunculus")
   internal static let sun172473 = ImageAsset(name: "SUN17247_3")
   internal static let dandel = ImageAsset(name: "dandel")
+  internal static let familyAsteraceae = ImageAsset(name: "familyAsteraceae")
+  internal static let familyLiliaceae = ImageAsset(name: "familyLiliaceae")
+  internal static let familyRanunculaceae = ImageAsset(name: "familyRanunculaceae")
+  internal static let familyRosaceae = ImageAsset(name: "familyRosaceae")
   internal static let hemlock = ImageAsset(name: "hemlock")
   internal static let identify = ImageAsset(name: "identify")
   internal static let picture = ImageAsset(name: "picture")

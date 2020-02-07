@@ -8,10 +8,20 @@
 
 import UIKit
 
+protocol HeaderTableViewCellDelegate: class {
+    func presentIdentifierDialogWindow()
+}
+
 class HeaderTableViewCell: UITableViewCell {
 
+    // MARK: - properties
+    
+    weak var delegate: HeaderTableViewCellDelegate?
+    
     @IBOutlet private weak var headerLabel: UILabel!
     @IBOutlet private weak var identifyButton: UIButton!
+    
+    // MARK: - override
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,10 +44,12 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
     private func setuoContent() {
-        headerLabel.text = L10n.pageHeader
+        headerLabel.text = L10n.homePageHeader
     }
     
+    // MARK: - actions
+    
     @IBAction private func identifyButtonTapped(_ sender: Any) {
-        
+        delegate?.presentIdentifierDialogWindow()
     }
 }

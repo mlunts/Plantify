@@ -15,12 +15,34 @@ internal enum L10n {
   internal static let alertTitleOK = L10n.tr("Localizable", "alertTitleOK")
   /// Retry
   internal static let alertTitleRetry = L10n.tr("Localizable", "alertTitleRetry")
+  /// Cancel
+  internal static let cancelText = L10n.tr("Localizable", "cancelText")
+  /// Choose From Library
+  internal static let chooseFromLibrary = L10n.tr("Localizable", "chooseFromLibrary")
   /// 
   internal static let emptyString = L10n.tr("Localizable", "emptyString")
+  /// Cannot identify the flower. Try again with another image.
+  internal static let errorNoClassifiedFlower = L10n.tr("Localizable", "errorNoClassifiedFlower")
+  /// Oops!
+  internal static let errorOops = L10n.tr("Localizable", "errorOops")
+  /// Asteraceae
+  internal static let familyAsteraceae = L10n.tr("Localizable", "familyAsteraceae")
+  /// Liliaceae
+  internal static let familyLiliaceae = L10n.tr("Localizable", "familyLiliaceae")
+  /// Ranunculaceae
+  internal static let familyRanunculaceae = L10n.tr("Localizable", "familyRanunculaceae")
+  /// Rosaceae
+  internal static let familyRosaceae = L10n.tr("Localizable", "familyRosaceae")
+  /// Explore flowers
+  internal static let homePageExploreHeader = L10n.tr("Localizable", "homePageExploreHeader")
+  /// Hi friend,\nWhat flower do you see?
+  internal static let homePageHeader = L10n.tr("Localizable", "homePageHeader")
+  /// View All
+  internal static let homePageViewAll = L10n.tr("Localizable", "homePageViewAll")
   /// No title
   internal static let noTitleText = L10n.tr("Localizable", "noTitleText")
-  /// Hi, \nWhat plant do you see?
-  internal static let pageHeader = L10n.tr("Localizable", "pageHeader")
+  /// Take Photo
+  internal static let takePhoto = L10n.tr("Localizable", "takePhoto")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

@@ -23,7 +23,7 @@
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="q9g-gO-6fY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,7 +48,7 @@
                     <constraint firstItem="9GE-hk-AvR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7WU-8B-VEc"/>
                     <constraint firstItem="KWY-za-UKH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KYV-f5-5G1"/>
                     <constraint firstAttribute="trailing" secondItem="KWY-za-UKH" secondAttribute="trailing" constant="20" id="gg1-tP-7Y6"/>
-                    <constraint firstAttribute="bottom" secondItem="9GE-hk-AvR" secondAttribute="bottom" constant="5" id="niB-ch-xaD"/>
+                    <constraint firstAttribute="bottom" secondItem="9GE-hk-AvR" secondAttribute="bottom" constant="15" id="niB-ch-xaD"/>
                     <constraint firstItem="9GE-hk-AvR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nvN-R9-Tgk"/>
                     <constraint firstItem="KWY-za-UKH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sGL-p5-caG"/>
                     <constraint firstItem="9GE-hk-AvR" firstAttribute="top" secondItem="KWY-za-UKH" secondAttribute="bottom" constant="20" id="sg9-mr-EnL"/>

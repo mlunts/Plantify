@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-class Database {
+class DatabaseManager {
     
     public func fetchJSON() -> [Plant] {
         var plants = [Plant]()

@@ -16,10 +16,10 @@
 		9C26F4BE229318DF00BDEA59 /* generalUses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BB229318DF00BDEA59 /* generalUses.json */; };
 		9C26F4BF229318DF00BDEA59 /* Plant.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BC229318DF00BDEA59 /* Plant.json */; };
 		9C26F4C0229318DF00BDEA59 /* problemSolvers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4BD229318DF00BDEA59 /* problemSolvers.json */; };
-		9C26F4C2229318E900BDEA59 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C1229318E900BDEA59 /* Database.swift */; };
+		9C26F4C2229318E900BDEA59 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C1229318E900BDEA59 /* DatabaseManager.swift */; };
 		9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C322931A9B00BDEA59 /* Plant.swift */; };
 		9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */; };
-		9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */; };
+		9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation+Extensions.swift */; };
 		9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */; };
 		9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */; };
 		9C44CF28229459D400F5B48D /* PlantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C44CF27229459D400F5B48D /* PlantCollectionViewController.swift */; };
@@ -37,6 +37,14 @@
 		D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */; };
 		D9E1DAD823EAE25200368EE9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */; };
 		D9E1DADA23EAE2C300368EE9 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD923EAE2C300368EE9 /* CALayer+Extensions.swift */; };
+		D9E1DADD23EB411B00368EE9 /* ClassifierManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DADC23EB411B00368EE9 /* ClassifierManager.swift */; };
+		D9E1DAE123EB50FA00368EE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAE023EB50FA00368EE9 /* BaseViewController.swift */; };
+		D9E1DAE523EB575E00368EE9 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAE323EB575E00368EE9 /* ExploreTableViewCell.swift */; };
+		D9E1DAE623EB575E00368EE9 /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1DAE423EB575E00368EE9 /* ExploreTableViewCell.xib */; };
+		D9E1DAEA23EC98D300368EE9 /* ExploreFamilyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAE823EC98D300368EE9 /* ExploreFamilyCollectionViewCell.swift */; };
+		D9E1DAEB23EC98D300368EE9 /* ExploreFamilyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1DAE923EC98D300368EE9 /* ExploreFamilyCollectionViewCell.xib */; };
+		D9E1DAED23EC9B7400368EE9 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAEC23EC9B7400368EE9 /* Family.swift */; };
+		D9E1DAEF23EC9E4F00368EE9 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +60,10 @@
 		9C26F4BB229318DF00BDEA59 /* generalUses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generalUses.json; sourceTree = "<group>"; };
 		9C26F4BC229318DF00BDEA59 /* Plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plant.json; sourceTree = "<group>"; };
 		9C26F4BD229318DF00BDEA59 /* problemSolvers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = problemSolvers.json; sourceTree = "<group>"; };
-		9C26F4C1229318E900BDEA59 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		9C26F4C1229318E900BDEA59 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9C26F4C322931A9B00BDEA59 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsClassifier.mlmodel; sourceTree = "<group>"; };
-		9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+Extensions.swift"; sourceTree = "<group>"; };
 		9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
 		9C26F4D022934A7F00BDEA59 /* TaxonomyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxonomyTableViewCell.swift; sourceTree = "<group>"; };
 		9C44CF27229459D400F5B48D /* PlantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,14 @@
 		D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D9E1DAD923EAE2C300368EE9 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		D9E1DADC23EB411B00368EE9 /* ClassifierManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierManager.swift; sourceTree = "<group>"; };
+		D9E1DAE023EB50FA00368EE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D9E1DAE323EB575E00368EE9 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
+		D9E1DAE423EB575E00368EE9 /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
+		D9E1DAE823EC98D300368EE9 /* ExploreFamilyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFamilyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D9E1DAE923EC98D300368EE9 /* ExploreFamilyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreFamilyCollectionViewCell.xib; sourceTree = "<group>"; };
+		D9E1DAEC23EC9B7400368EE9 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +148,7 @@
 				9C26F4C722931AE100BDEA59 /* Models */,
 				D9E1DAD123EADBCD00368EE9 /* Extensions */,
 				D9E1DAD423EADCEB00368EE9 /* Helpers */,
+				D9E1DADB23EB40F500368EE9 /* Managers */,
 				D9D6DD4A23E99C31008C8DC0 /* Resources */,
 				9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */,
 				9C26F4B3229316DD00BDEA59 /* Info.plist */,
@@ -142,6 +159,7 @@
 		9C26F4C722931AE100BDEA59 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D9E1DAEC23EC9B7400368EE9 /* Family.swift */,
 				9C26F4C322931A9B00BDEA59 /* Plant.swift */,
 				9C26F4C522931AD300BDEA59 /* PlantsClassifier.mlmodel */,
 			);
@@ -151,7 +169,6 @@
 		9C26F4C922931B1300BDEA59 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation.swift */,
 				9C26F4A9229316DC00BDEA59 /* ViewController.swift */,
 				9C26F4CC22931B3300BDEA59 /* PlantViewController.swift */,
 				9C44CF27229459D400F5B48D /* PlantCollectionViewController.swift */,
@@ -175,7 +192,6 @@
 			children = (
 				D9D6DD4D23E99C67008C8DC0 /* Fonts */,
 				D9D6DD4C23E99C5F008C8DC0 /* Helpers */,
-				9C26F4C1229318E900BDEA59 /* Database.swift */,
 				D9D6DD3123E997B7008C8DC0 /* Localizable.strings */,
 				9C26F4BB229318DF00BDEA59 /* generalUses.json */,
 				9C26F4BC229318DF00BDEA59 /* Plant.json */,
@@ -217,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D6DD5E23E9D09E008C8DC0 /* Header */,
+				D9E1DAE223EB573900368EE9 /* Explore */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -233,9 +250,11 @@
 		D9E1DAD123EADBCD00368EE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D9E1DAD923EAE2C300368EE9 /* CALayer+Extensions.swift */,
+				9C26F4CA22931B2B00BDEA59 /* CGImagePropertyOrientation+Extensions.swift */,
 				D9E1DAD223EADBEA00368EE9 /* UITableView+Extensions.swift */,
 				D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */,
-				D9E1DAD923EAE2C300368EE9 /* CALayer+Extensions.swift */,
+				D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,8 +263,37 @@
 			isa = PBXGroup;
 			children = (
 				D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */,
+				D9E1DAE023EB50FA00368EE9 /* BaseViewController.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D9E1DADB23EB40F500368EE9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9C26F4C1229318E900BDEA59 /* DatabaseManager.swift */,
+				D9E1DADC23EB411B00368EE9 /* ClassifierManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D9E1DAE223EB573900368EE9 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				D9E1DAE723EC987A00368EE9 /* FamilyCell */,
+				D9E1DAE323EB575E00368EE9 /* ExploreTableViewCell.swift */,
+				D9E1DAE423EB575E00368EE9 /* ExploreTableViewCell.xib */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		D9E1DAE723EC987A00368EE9 /* FamilyCell */ = {
+			isa = PBXGroup;
+			children = (
+				D9E1DAE823EC98D300368EE9 /* ExploreFamilyCollectionViewCell.swift */,
+				D9E1DAE923EC98D300368EE9 /* ExploreFamilyCollectionViewCell.xib */,
+			);
+			path = FamilyCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D6DD5223E99EE5008C8DC0 /* HomePage.storyboard in Resources */,
+				D9E1DAE623EB575E00368EE9 /* ExploreTableViewCell.xib in Resources */,
 				D9D6DD5D23E9D098008C8DC0 /* HeaderTableViewCell.xib in Resources */,
 				9C26F4B2229316DD00BDEA59 /* LaunchScreen.storyboard in Resources */,
 				9C26F4AF229316DD00BDEA59 /* Assets.xcassets in Resources */,
@@ -317,6 +366,7 @@
 				D9D6DD3223E997B7008C8DC0 /* Localizable.strings in Resources */,
 				9C26F4BE229318DF00BDEA59 /* generalUses.json in Resources */,
 				9C26F4AD229316DC00BDEA59 /* Main.storyboard in Resources */,
+				D9E1DAEB23EC98D300368EE9 /* ExploreFamilyCollectionViewCell.xib in Resources */,
 				9C26F4BF229318DF00BDEA59 /* Plant.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,12 +434,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E1DAED23EC9B7400368EE9 /* Family.swift in Sources */,
+				D9E1DAEA23EC98D300368EE9 /* ExploreFamilyCollectionViewCell.swift in Sources */,
 				9C44CF2A22946B3E00F5B48D /* PlantCollectionViewCell.swift in Sources */,
+				D9E1DADD23EB411B00368EE9 /* ClassifierManager.swift in Sources */,
 				D9D6DD4F23E99CE1008C8DC0 /* Assets.swift in Sources */,
+				D9E1DAE123EB50FA00368EE9 /* BaseViewController.swift in Sources */,
 				9C44CF28229459D400F5B48D /* PlantCollectionViewController.swift in Sources */,
 				9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */,
-				9C26F4C2229318E900BDEA59 /* Database.swift in Sources */,
+				9C26F4C2229318E900BDEA59 /* DatabaseManager.swift in Sources */,
 				D9D6DD5623E9C5B5008C8DC0 /* HomePageTableViewController.swift in Sources */,
+				D9E1DAEF23EC9E4F00368EE9 /* UICollectionView+Extensions.swift in Sources */,
 				9C26F4C422931A9B00BDEA59 /* Plant.swift in Sources */,
 				D9E1DADA23EAE2C300368EE9 /* CALayer+Extensions.swift in Sources */,
 				D9C5AE6623EAD4C8005358DE /* Strings.swift in Sources */,
@@ -397,12 +452,13 @@
 				D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */,
 				D9C5AE6723EAD4C8005358DE /* Scenes.swift in Sources */,
 				9C26F4CD22931B3300BDEA59 /* PlantViewController.swift in Sources */,
+				D9E1DAE523EB575E00368EE9 /* ExploreTableViewCell.swift in Sources */,
 				D9E1DAD823EAE25200368EE9 /* UIView+Extensions.swift in Sources */,
 				9C26F4D122934A7F00BDEA59 /* TaxonomyTableViewCell.swift in Sources */,
 				D9D6DD5423E9A044008C8DC0 /* HomePageViewController.swift in Sources */,
 				D9D6DD5C23E9D098008C8DC0 /* HeaderTableViewCell.swift in Sources */,
 				9C26F4AA229316DC00BDEA59 /* ViewController.swift in Sources */,
-				9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation.swift in Sources */,
+				9C26F4CB22931B2B00BDEA59 /* CGImagePropertyOrientation+Extensions.swift in Sources */,
 				9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

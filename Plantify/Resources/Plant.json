@@ -103,17 +103,4 @@
         "family_name": "Ranunculaceae",
         "image": "Ranunculus.jpg"
     },
-    {
-        "plantID": 9,
-        "plant_name": "Poison Hemlock",
-        "botanical_name": "Conium maculatum",
-        "description": "Poison hemlock, lethally poisonous herbaceous plant (Conium maculatum) of the family Umbelliferae (parsley family). It has rank, finely divided foliage, flat-topped clusters of small white flowers, and a hollow, purple-mottled stem. Although native to the Old World, it is now naturalized and common in parts of the United States. The poisonous principle (the alkaloid coniine) causes paralysis, convulsions, and eventual death.",
-        "flower_time": "Spring",
-        "poisoned": 1,
-        "side_effects": "Hemlock poisoning occurs after ingesting any part of the plant, such as the seeds, flowers, leaves, or fruits. All parts of this plant contain toxic alkaloids that can be fatal even in small amounts. The alkaloids can affect nerve impulse transmission to your muscles, eventually killing you through respiratory failure. Even touching this plant may cause a skin reaction in some people. To date, there is no antidote. Symptoms of hemlock poisoning can appear anywhere between 30 minutes to hours after ingesting the plant. The severity of your symptoms greatly depends on how much of the plant is in your system and the toxicity of the plant at its time of growth.",
-        "tribe_name": "Conium",
-        "order_name": "Apiales",
-        "family_name": "Apiaceae",
-        "image": "hemlock.jpeg"
-    }
 ]

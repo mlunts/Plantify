@@ -96,16 +96,20 @@ class ViewController: UIViewController {
         }
         
         let photoSourcePicker = UIAlertController()
-        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { [unowned self] _ in
+        
+        let takePhoto = UIAlertAction(title: L10n.takePhoto, style: .default) { [unowned self] _ in
             self.presentPhotoPicker(sourceType: .camera)
         }
-        let choosePhoto = UIAlertAction(title: "Choose Photo", style: .default) { [unowned self] _ in
+        
+        let choosePhoto = UIAlertAction(title: L10n.chooseFromLibrary, style: .default) { [unowned self] _ in
             self.presentPhotoPicker(sourceType: .photoLibrary)
         }
         
+        let cancelAction = UIAlertAction(title: L10n.cancelText, style: .cancel, handler: nil)
+        
         photoSourcePicker.addAction(takePhoto)
         photoSourcePicker.addAction(choosePhoto)
-        photoSourcePicker.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        photoSourcePicker.addAction(cancelAction)
         
         present(photoSourcePicker, animated: true)
     }
