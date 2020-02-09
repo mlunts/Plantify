@@ -78,7 +78,7 @@ class ClassifierManager {
             return
         }
         
-        classifications = results as! [VNClassificationObservation]
+        classifications = results as? [VNClassificationObservation]
         
         //                if classifications.isEmpty {
         //    //                self.classificationLabel.text = "Nothing recognized."

@@ -27,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjG-Hw-Sbx">
-                        <rect key="frame" x="20" y="60" width="280" height="301"/>
+                        <rect key="frame" x="20" y="55" width="280" height="306"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="K9C-xb-fbZ"/>
@@ -50,7 +50,7 @@
                     <constraint firstAttribute="trailing" secondItem="oxl-1v-CRm" secondAttribute="trailing" constant="20" id="Ore-sH-zxc"/>
                     <constraint firstAttribute="trailingMargin" secondItem="A7h-RO-do5" secondAttribute="trailing" constant="20" id="au8-8s-Mr8"/>
                     <constraint firstAttribute="trailing" secondItem="YjG-Hw-Sbx" secondAttribute="trailing" constant="20" id="fxA-HG-Prc"/>
-                    <constraint firstItem="YjG-Hw-Sbx" firstAttribute="top" secondItem="oxl-1v-CRm" secondAttribute="bottom" constant="15" id="pLg-e0-8Ui"/>
+                    <constraint firstItem="YjG-Hw-Sbx" firstAttribute="top" secondItem="oxl-1v-CRm" secondAttribute="bottom" constant="10" id="pLg-e0-8Ui"/>
                     <constraint firstItem="oxl-1v-CRm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qlk-ca-B90"/>
                     <constraint firstItem="A7h-RO-do5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="uAk-Na-VYH"/>
                     <constraint firstItem="oxl-1v-CRm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="xs0-jW-trh"/>

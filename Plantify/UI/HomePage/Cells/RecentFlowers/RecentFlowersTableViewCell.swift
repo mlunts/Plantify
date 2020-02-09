@@ -20,6 +20,7 @@ class RecentFlowersTableViewCell: UITableViewCell {
     
     private let headerHeight: CGFloat = 80
     private let cellHeight: CGFloat = 85
+    
     private var flowers: [Plant]? = []
     
     @IBOutlet private weak var recentFlowersHeaderLabel: UILabel!
@@ -46,7 +47,7 @@ class RecentFlowersTableViewCell: UITableViewCell {
     func getHeight() {
         if flowers != nil {
             let height = headerHeight + CGFloat(flowers!.count) * cellHeight
-             
+            
             delegate?.setCellHeight(height)
         }
     }
