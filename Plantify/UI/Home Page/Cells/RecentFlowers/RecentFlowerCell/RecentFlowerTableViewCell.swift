@@ -12,6 +12,7 @@ class RecentFlowerTableViewCell: UITableViewCell {
 
     // MARK: - properties
     
+    @IBOutlet private  weak var flowerImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var subTitleLabel: UILabel!
     
@@ -19,6 +20,8 @@ class RecentFlowerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setStyle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,6 +35,13 @@ class RecentFlowerTableViewCell: UITableViewCell {
     func setContent(with flower: Plant) {
         nameLabel.text = flower.name
         subTitleLabel.text = flower.information
+        flowerImageView.setCustomImage(flower.imageURL)
+    }
+    
+    // MARK: - private
+    
+    func setStyle() {
+        flowerImageView.backgroundColor = ColorRandomiser().getColor()
     }
     
 }

@@ -32,6 +32,7 @@ class DatabaseManager {
                     plant.tribe = json[i]["tribe_name"].stringValue
                     plant.order = json[i]["order_name"].stringValue
                     plant.family = json[i]["family_name"].stringValue
+                    plant.imageURL = json[i]["image"].stringValue
 //                    plant.setImage(imageName: json[i]["image"].stringValue)
                     if json[i]["poisoned"].intValue == 1 {
                         plant.poisoned = true

@@ -23,7 +23,7 @@
         "tribe_name": "Heliantheae",
         "order_name": "Asterales",
         "family_name": "Asteraceae",
-        "image": "SUN17247_3.jpg"
+        "image": "https://fontepuro.com/resources/img/sunflower_rotate.png"
     },
     {
         "plantID": 3,
@@ -36,7 +36,7 @@
         "tribe_name": "Cichorieae",
         "order_name": "Asterales",
         "family_name": "Asteraceae",
-        "image": "dandel.jpg"
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Fnature%2Fflowers%2Fdandelion%2Fdandelion-flower&psig=AOvVaw0eGIA8Hx7uB2AsOrZ4hG7j&ust=1581346687361000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDwttDdxOcCFQAAAAAdAAAAABAD"
     },
     {
         "plantID": 4,
@@ -88,7 +88,7 @@
         "tribe_name": "Aster",
         "order_name": "Asterales",
         "family_name": "Asteraceae",
-        "image": "DaisySlide1-2.jpg"
+        "image": "https://cdn.pixabay.com/photo/2019/07/19/00/15/shasta-daisy-4347653_960_720.png"
     },
     {
         "plantID": 8,

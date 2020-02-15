@@ -23,7 +23,7 @@ class Plant: NSObject, NSCoding {
     public var order: String
     //    public var generalUse = [String]()
     //    public var problemSolvers = [String]()
-    //    public var image: UIImage!
+    public var imageURL: String
     
     override init() {
         self.id = 0
@@ -36,6 +36,7 @@ class Plant: NSObject, NSCoding {
         self.family = ""
         self.order = ""
         self.flowerTime = ""
+        self.imageURL = ""
     }
     
     required init(coder decoder: NSCoder) {
@@ -49,6 +50,7 @@ class Plant: NSObject, NSCoding {
         self.family = decoder.decodeObject(forKey: "family_name") as? String ?? ""
         self.order = decoder.decodeObject(forKey: "order_name") as? String ?? ""
         self.flowerTime = decoder.decodeObject(forKey: "flower_time") as? String ?? ""
+        self.imageURL = decoder.decodeObject(forKey: "image") as? String ?? ""
     }
     
     // MARK: - public
@@ -65,7 +67,7 @@ class Plant: NSObject, NSCoding {
         coder.encode(order, forKey: "order_name")
         coder.encode(family, forKey: "family_name")
         coder.encode(poisoned, forKey: "poisoned")
-        
+        coder.encode(imageURL, forKey: "image")
     }
     
     func getTaxonomy() -> [Int : (String, String)] {
@@ -88,9 +90,6 @@ class Plant: NSObject, NSCoding {
     //        }
     //    }
     //
-    //    func setImage(imageName: String) {
-    //        self.image = UIImage(named: imageName)
-    //    }
     
     func isObjectEmpty() -> Bool {
         return (id == 0)

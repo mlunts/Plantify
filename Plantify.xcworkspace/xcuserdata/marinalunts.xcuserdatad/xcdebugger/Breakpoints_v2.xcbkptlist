@@ -55,16 +55,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "871F4FC6-F98C-42C1-A009-E473CE86F1F8"
+            uuid = "96D4E5E1-3BC9-4ADE-AF6D-689EDC84D819"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Plantify/UI/HomePage/HomePageTableViewController.swift"
+            filePath = "Plantify/UI/HomePage/Cells/RecentFlowers/RecentFlowerCell/RecentFlowerTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "setCellHeight(_:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setContent(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABB221F1-8AD0-4B6F-8CB9-9E35102AFAA7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Plantify/Managers/DatabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "fetchJSON()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
