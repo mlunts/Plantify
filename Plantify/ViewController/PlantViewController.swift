@@ -49,7 +49,7 @@ class PlantViewController: UIViewController {
         if newImage != nil {
             imageView.image = newImage
         } else {
-            imageView.image = classifiedPlant.image
+//            imageView.image = classifiedPlant.image
         }
         nameLabel.text = classifiedPlant.name
         botanicalNameLabel.text = classifiedPlant.botanicalName
@@ -60,23 +60,23 @@ class PlantViewController: UIViewController {
         } else {
             poisonLabel.isHidden = true
         }
-        if classifiedPlant.generalUse.isEmpty {
-            generalUseKeyLabel.isHidden = true
-            generalUseLabel.isHidden = true
-        } else {
-            generalUseKeyLabel.isHidden = false
-            generalUseLabel.isHidden = false
-            generalUseLabel.text = classifiedPlant.generalUse.joined(separator: "\n")
-        }
+//        if classifiedPlant.generalUse.isEmpty {
+//            generalUseKeyLabel.isHidden = true
+//            generalUseLabel.isHidden = true
+//        } else {
+//            generalUseKeyLabel.isHidden = false
+//            generalUseLabel.isHidden = false
+//            generalUseLabel.text = classifiedPlant.generalUse.joined(separator: "\n")
+//        }
         sideEffects.text = classifiedPlant.sideEffects
-        if classifiedPlant.problemSolvers.isEmpty {
-            problemSolverKeyUseLabel.isHidden = true
-            problemSolverUseLabel.isHidden = true
-        } else {
-            problemSolverKeyUseLabel.isHidden = false
-            problemSolverUseLabel.isHidden = false
-            problemSolverUseLabel.text = classifiedPlant.problemSolvers.joined(separator: "\n")
-        }
+//        if classifiedPlant.problemSolvers.isEmpty {
+//            problemSolverKeyUseLabel.isHidden = true
+//            problemSolverUseLabel.isHidden = true
+//        } else {
+//            problemSolverKeyUseLabel.isHidden = false
+//            problemSolverUseLabel.isHidden = false
+//            problemSolverUseLabel.text = classifiedPlant.problemSolvers.joined(separator: "\n")
+//        }
     }
 }
 

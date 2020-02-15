@@ -37,6 +37,10 @@ internal enum L10n {
   internal static let homePageExploreHeader = L10n.tr("Localizable", "homePageExploreHeader")
   /// Hi friend,\nWhat flower do you see?
   internal static let homePageHeader = L10n.tr("Localizable", "homePageHeader")
+  /// You have no recent identified flowers.
+  internal static let homePageNoRecentFlowers = L10n.tr("Localizable", "homePageNoRecentFlowers")
+  /// Recent flowers
+  internal static let homePageRecentFlowers = L10n.tr("Localizable", "homePageRecentFlowers")
   /// View All
   internal static let homePageViewAll = L10n.tr("Localizable", "homePageViewAll")
   /// No title

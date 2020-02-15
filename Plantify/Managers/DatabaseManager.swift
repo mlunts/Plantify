@@ -10,7 +10,9 @@ import SwiftyJSON
 
 class DatabaseManager {
     
-    public func fetchJSON() -> [Plant] {
+    static let shared = DatabaseManager()
+    
+    func fetchJSON() -> [Plant] {
         var plants = [Plant]()
         if let path = Bundle.main.path(forResource: "Plant", ofType: "json")
         {
@@ -19,7 +21,7 @@ class DatabaseManager {
                 let json = try JSON(data: pathAsData as Data)
                 
                 for i in 0...json.array!.count - 1  {
-                    var plant = Plant()
+                    let plant = Plant()
                     //                    phrases.append(Phrase(text: json[type][i]["phrase"].stringValue))
                     plant.id = json[i]["plantID"].intValue
                     plant.name = json[i]["plant_name"].stringValue
@@ -30,15 +32,16 @@ class DatabaseManager {
                     plant.tribe = json[i]["tribe_name"].stringValue
                     plant.order = json[i]["order_name"].stringValue
                     plant.family = json[i]["family_name"].stringValue
-                    plant.setImage(imageName: json[i]["image"].stringValue)
+                    plant.imageURL = json[i]["image"].stringValue
+//                    plant.setImage(imageName: json[i]["image"].stringValue)
                     if json[i]["poisoned"].intValue == 1 {
                         plant.poisoned = true
                     }
                     if !getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id).isEmpty {
-                        plant.setGeneralUse(array: getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id))
+//                        plant.setGeneralUse(array: getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id))
                     }
                     if !getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id).isEmpty {
-                        plant.setProblemSolvers(array: getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id))
+//                        plant.setProblemSolvers(array: getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id))
                     }
                     plants.append(plant)
                 }

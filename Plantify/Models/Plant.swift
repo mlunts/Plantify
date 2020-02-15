@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import  UIKit
+import UIKit
 
-class Plant: NSObject {
+class Plant: NSObject, NSCoding {
     
     public var id: Int
     public var name: String
@@ -21,10 +21,10 @@ class Plant: NSObject {
     public var tribe: String
     public var family: String
     public var order: String
-    public var generalUse = [String]()
-    public var problemSolvers = [String]()
-    public var image: UIImage!
-   
+    //    public var generalUse = [String]()
+    //    public var problemSolvers = [String]()
+    public var imageURL: String
+    
     override init() {
         self.id = 0
         self.name = ""
@@ -36,9 +36,41 @@ class Plant: NSObject {
         self.family = ""
         self.order = ""
         self.flowerTime = ""
+        self.imageURL = ""
     }
     
-    public func getTaxonomy() -> [Int : (String, String)] {
+    required init(coder decoder: NSCoder) {
+        self.id = decoder.decodeInteger(forKey: "plantID")
+        self.name = decoder.decodeObject(forKey: "plant_name") as? String ?? ""
+        self.botanicalName = decoder.decodeObject(forKey: "botanical_name") as? String ?? ""
+        self.information = decoder.decodeObject(forKey: "description") as? String ?? ""
+        self.poisoned = decoder.decodeBool(forKey: "poisoned")
+        self.sideEffects = decoder.decodeObject(forKey: "side_effects") as? String ?? ""
+        self.tribe = decoder.decodeObject(forKey: "tribe_name") as? String ?? ""
+        self.family = decoder.decodeObject(forKey: "family_name") as? String ?? ""
+        self.order = decoder.decodeObject(forKey: "order_name") as? String ?? ""
+        self.flowerTime = decoder.decodeObject(forKey: "flower_time") as? String ?? ""
+        self.imageURL = decoder.decodeObject(forKey: "image") as? String ?? ""
+    }
+    
+    // MARK: - public
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "plant_name")
+        coder.encode(id, forKey: "plantID")
+        coder.encode(botanicalName, forKey: "botanical_name")
+        coder.encode(information, forKey: "description")
+        coder.encode(flowerTime, forKey: "flower_time")
+        coder.encode(name, forKey: "plant_name")
+        coder.encode(sideEffects, forKey: "side_effects")
+        coder.encode(tribe, forKey: "tribe_name")
+        coder.encode(order, forKey: "order_name")
+        coder.encode(family, forKey: "family_name")
+        coder.encode(poisoned, forKey: "poisoned")
+        coder.encode(imageURL, forKey: "image")
+    }
+    
+    func getTaxonomy() -> [Int : (String, String)] {
         var taxonomy = [Int : (String, String)]()
         taxonomy[0] = (self.order, "Order:")
         taxonomy[1] = (self.family, "Family:")
@@ -46,23 +78,20 @@ class Plant: NSObject {
         return taxonomy
     }
     
-    public func setGeneralUse(array: [String])  {
-        for element in array {
-            generalUse.append(element)
-        }
-    }
+    //    func setGeneralUse(array: [String])  {
+    //        for element in array {
+    //            generalUse.append(element)
+    //        }
+    //    }
+    //
+    //    func setProblemSolvers(array: [String])  {
+    //        for element in array {
+    //            problemSolvers.append(element)
+    //        }
+    //    }
+    //
     
-    public func setProblemSolvers(array: [String])  {
-        for element in array {
-            problemSolvers.append(element)
-        }
-    }
-    
-    public func setImage(imageName: String) {
-        self.image = UIImage(named: imageName)
-    }
-    
-    public func isObjectEmpty() -> Bool {
+    func isObjectEmpty() -> Bool {
         return (id == 0)
     }
 }

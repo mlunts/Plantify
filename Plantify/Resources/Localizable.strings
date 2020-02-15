@@ -12,7 +12,8 @@
 "homePageHeader" = "Hi friend,\nWhat flower do you see?";
 "homePageExploreHeader" = "Explore flowers";
 "homePageViewAll" = "View All"; 
-
+"homePageRecentFlowers" = "Recent flowers";
+"homePageNoRecentFlowers" = "You have no recent identified flowers."; 
 
 // Photo picker
 "takePhoto" = "Take Photo";

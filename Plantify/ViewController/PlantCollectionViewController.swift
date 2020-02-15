@@ -41,7 +41,7 @@ class PlantCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! PlantCollectionViewCell
         
-        cell.imageLabel.image = plants[indexPath.row].image
+//        cell.imageLabel.image = plants[indexPath.row].image
         cell.botanicalNameLabel.text = plants[indexPath.row].botanicalName
         cell.nameLabel.text = plants[indexPath.row].name
         

@@ -13,6 +13,7 @@ class HomePageTableViewController: BaseViewController {
     // MARK: - properties
     
     private var image: UIImage!
+    private var recentFlowersHeight: CGFloat = 120
     
     @IBOutlet private weak var homePageTableView: UITableView!
     
@@ -28,12 +29,14 @@ class HomePageTableViewController: BaseViewController {
     // MARK: - private
     
     private func setupBehaviour() {
-        let headerNib = UINib(nibName: "HeaderTableViewCell", bundle: nil)
-        homePageTableView.register(headerNib.self, forCellReuseIdentifier: "HeaderTableViewCell")
-        
-        let exploreNib = UINib(nibName: "ExploreTableViewCell", bundle: nil)
-        homePageTableView.register(exploreNib.self, forCellReuseIdentifier: "ExploreTableViewCell")
-        
+        setNib("HeaderTableViewCell")
+        setNib("ExploreTableViewCell")
+        setNib("RecentFlowersTableViewCell")
+    }
+    
+    private func setNib(_ name: String) {
+        let nib = UINib(nibName: name, bundle: nil)
+        homePageTableView.register(nib.self, forCellReuseIdentifier: name)
     }
     
     private func presentDialogWindow() {
@@ -71,7 +74,7 @@ class HomePageTableViewController: BaseViewController {
     private func classifyFlower() {
         ClassifierManager.shared.classifyFlower(for: image, completaion: { result in
             if let result = result {
-                print(result)
+                RecentFlowersManager.shared.addFlower(result)
             } else {
                 self.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
             }
@@ -81,7 +84,7 @@ class HomePageTableViewController: BaseViewController {
 
 extension HomePageTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,10 +95,16 @@ extension HomePageTableViewController: UITableViewDelegate, UITableViewDataSourc
             cell.delegate = self
             
             return cell
-        default:
+        case 1:
             let cell: ExploreTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             
-//            cell.delegate = self
+            return cell
+            
+        default:
+            let cell: RecentFlowersTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            
+            cell.delegate = self
+            cell.getHeight()
             
             return cell
         }
@@ -103,7 +112,13 @@ extension HomePageTableViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        switch indexPath.row {
+        case 2:
+            return recentFlowersHeight
+            
+        default:
+            return UITableView.automaticDimension
+        }
     }
 }
 
@@ -122,9 +137,19 @@ extension HomePageTableViewController: UIImagePickerControllerDelegate, UINaviga
 }
 
 extension HomePageTableViewController: HeaderTableViewCellDelegate {
-    
     func presentIdentifierDialogWindow() {
         presentDialogWindow()
+    }
+    
+}
+
+extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
+    func setCellHeight(_ height: CGFloat) {
+        recentFlowersHeight = height
+        
+        //        self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+        homePageTableView.beginUpdates()
+        homePageTableView.endUpdates()
     }
     
 }
