@@ -10,6 +10,7 @@ import UIKit
 
 protocol RecentFlowersTableViewCellDelegate: class {
     func setCellHeight(_ height: CGFloat)
+    func recentFlowerSelected(_ flower: Plant)
 }
 
 class RecentFlowersTableViewCell: UITableViewCell {
@@ -103,6 +104,11 @@ extension RecentFlowersTableViewCell: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let flower = flowers![indexPath.row]
+        delegate?.recentFlowerSelected(flower)
     }
     
 }

@@ -9,22 +9,23 @@
 import UIKit
 
 class HomePageViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupContent()
+        setupStyle()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - private
+    
+    private func setupContent() {
+        title = L10n.homePageHeader
     }
-    */
+    
+    private func setupStyle() {
+        setupNavigationMultilineTitle()
+    }
 
 }

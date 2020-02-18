@@ -18,15 +18,13 @@ class HeaderTableViewCell: UITableViewCell {
     
     weak var delegate: HeaderTableViewCellDelegate?
     
-    @IBOutlet private weak var headerLabel: UILabel!
     @IBOutlet private weak var identifyButton: UIButton!
     
     // MARK: - override
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        setuoContent()
+
         setupStyle()
     }
 
@@ -41,10 +39,6 @@ class HeaderTableViewCell: UITableViewCell {
     private func setupStyle() {
         identifyButton.cornerRadius = identifyButton.bounds.height / 3
         identifyButton.dropShadow(shadowOffset: CGSize(width: 0, height: 1.0), shadowOpacity: 1, shadowRadius: 3, shadowColor: Asset.shadyLady.color)
-    }
-    
-    private func setuoContent() {
-        headerLabel.text = L10n.homePageHeader
     }
     
     // MARK: - actions

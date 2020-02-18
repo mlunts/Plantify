@@ -17,6 +17,8 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<Plantify.HomePageViewController>(storyboard: HomePage.self)
 
+    internal static let homePageTableViewController = SceneType<Plantify.HomePageTableViewController>(storyboard: HomePage.self, identifier: "HomePageTableViewController")
+
     internal static let homePageViewController = SceneType<Plantify.HomePageViewController>(storyboard: HomePage.self, identifier: "HomePageViewController")
   }
   internal enum LaunchScreen: StoryboardType {
@@ -24,10 +26,10 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
   }
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
+  internal enum PlantDetails: StoryboardType {
+    internal static let storyboardName = "PlantDetails"
 
-    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Main.self)
+    internal static let plantDetailsViewController = SceneType<PlantDetailsViewController>(storyboard: PlantDetails.self, identifier: "PlantDetailsViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

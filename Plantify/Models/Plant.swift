@@ -21,6 +21,7 @@ class Plant: NSObject, NSCoding {
     public var tribe: String
     public var family: String
     public var order: String
+    public var plantType: String
     //    public var generalUse = [String]()
     //    public var problemSolvers = [String]()
     public var imageURL: String
@@ -37,6 +38,7 @@ class Plant: NSObject, NSCoding {
         self.order = ""
         self.flowerTime = ""
         self.imageURL = ""
+        self.plantType = ""
     }
     
     required init(coder decoder: NSCoder) {
@@ -51,6 +53,7 @@ class Plant: NSObject, NSCoding {
         self.order = decoder.decodeObject(forKey: "order_name") as? String ?? ""
         self.flowerTime = decoder.decodeObject(forKey: "flower_time") as? String ?? ""
         self.imageURL = decoder.decodeObject(forKey: "image") as? String ?? ""
+        self.plantType = decoder.decodeObject(forKey: "plant_type") as? String ?? ""
     }
     
     // MARK: - public
@@ -68,6 +71,7 @@ class Plant: NSObject, NSCoding {
         coder.encode(family, forKey: "family_name")
         coder.encode(poisoned, forKey: "poisoned")
         coder.encode(imageURL, forKey: "image")
+        coder.encode(plantType, forKey: "plant_type")
     }
     
     func getTaxonomy() -> [Int : (String, String)] {
@@ -90,6 +94,10 @@ class Plant: NSObject, NSCoding {
     //        }
     //    }
     //
+    
+    func poisonedString() -> String {
+        return poisoned ? L10n.plantInfoPoisoned : L10n.plantInfoNotPoisoned
+    }
     
     func isObjectEmpty() -> Bool {
         return (id == 0)

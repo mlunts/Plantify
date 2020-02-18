@@ -22,7 +22,7 @@ class DatabaseManager {
                 
                 for i in 0...json.array!.count - 1  {
                     let plant = Plant()
-                    //                    phrases.append(Phrase(text: json[type][i]["phrase"].stringValue))
+
                     plant.id = json[i]["plantID"].intValue
                     plant.name = json[i]["plant_name"].stringValue
                     plant.botanicalName = json[i]["botanical_name"].stringValue
@@ -33,10 +33,12 @@ class DatabaseManager {
                     plant.order = json[i]["order_name"].stringValue
                     plant.family = json[i]["family_name"].stringValue
                     plant.imageURL = json[i]["image"].stringValue
+                    plant.plantType = json[i]["plant_type"].stringValue
 //                    plant.setImage(imageName: json[i]["image"].stringValue)
                     if json[i]["poisoned"].intValue == 1 {
                         plant.poisoned = true
                     }
+                    
                     if !getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id).isEmpty {
 //                        plant.setGeneralUse(array: getArraysDataFromJSON(jsonFileName: "generalUses", plantId: plant.id))
                     }

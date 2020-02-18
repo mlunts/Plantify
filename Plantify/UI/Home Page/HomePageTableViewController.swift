@@ -23,7 +23,7 @@ class HomePageTableViewController: BaseViewController {
         super.viewDidLoad()
         
         setupBehaviour()
-        
+        setStyle()
     }
     
     // MARK: - private
@@ -32,6 +32,10 @@ class HomePageTableViewController: BaseViewController {
         setNib("HeaderTableViewCell")
         setNib("ExploreTableViewCell")
         setNib("RecentFlowersTableViewCell")
+    }
+    
+    private func setStyle() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     private func setNib(_ name: String) {
@@ -75,6 +79,13 @@ class HomePageTableViewController: BaseViewController {
         ClassifierManager.shared.classifyFlower(for: image, completaion: { result in
             if let result = result {
                 RecentFlowersManager.shared.addFlower(result)
+                
+                let vc = PlantDetailsViewController.instantiate(with: result, source: .identification)
+                
+                self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+                
+                self.navigationController?.present(vc, animated: true, completion: nil)
+                
             } else {
                 self.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
             }
@@ -144,10 +155,15 @@ extension HomePageTableViewController: HeaderTableViewCellDelegate {
 }
 
 extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
-    func setCellHeight(_ height: CGFloat) {
-        recentFlowersHeight = height
+    func recentFlowerSelected(_ flower: Plant) {
+        let vc = PlantDetailsViewController.instantiate(with: flower, source: .list)
         
-        //        self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setCellHeight(_ height: CGFloat) {
+        recentFlowersHeight = height + 10
+        
         homePageTableView.beginUpdates()
         homePageTableView.endUpdates()
     }

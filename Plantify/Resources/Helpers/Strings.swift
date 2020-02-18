@@ -35,7 +35,7 @@ internal enum L10n {
   internal static let familyRosaceae = L10n.tr("Localizable", "familyRosaceae")
   /// Explore flowers
   internal static let homePageExploreHeader = L10n.tr("Localizable", "homePageExploreHeader")
-  /// Hi friend,\nWhat flower do you see?
+  /// What flower do you see?
   internal static let homePageHeader = L10n.tr("Localizable", "homePageHeader")
   /// You have no recent identified flowers.
   internal static let homePageNoRecentFlowers = L10n.tr("Localizable", "homePageNoRecentFlowers")
@@ -45,6 +45,10 @@ internal enum L10n {
   internal static let homePageViewAll = L10n.tr("Localizable", "homePageViewAll")
   /// No title
   internal static let noTitleText = L10n.tr("Localizable", "noTitleText")
+  /// Not poisoned
+  internal static let plantInfoNotPoisoned = L10n.tr("Localizable", "plantInfoNotPoisoned")
+  /// Poisoned
+  internal static let plantInfoPoisoned = L10n.tr("Localizable", "plantInfoPoisoned")
   /// Take Photo
   internal static let takePhoto = L10n.tr("Localizable", "takePhoto")
 }

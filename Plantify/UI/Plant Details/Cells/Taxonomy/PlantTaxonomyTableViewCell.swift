@@ -1,17 +1,15 @@
 //
-//  TaxonimyTableViewCell.swift
-//  
+//  PlantTaxonomyTableViewCell.swift
+//  Plantify
 //
-//  Created by Marina Lunts on 5/20/19.
+//  Created by Marina Lunts on 16.02.2020.
+//  Copyright © 2020 earine. All rights reserved.
 //
 
 import UIKit
 
-class TaxonomyTableViewCell: UITableViewCell {
+class PlantTaxonomyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var keyLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +20,5 @@ class TaxonomyTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

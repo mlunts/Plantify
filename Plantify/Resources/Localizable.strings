@@ -9,7 +9,7 @@
 "errorNoClassifiedFlower" = "Cannot identify the flower. Try again with another image.";
 
 // Homepage
-"homePageHeader" = "Hi friend,\nWhat flower do you see?";
+"homePageHeader" = "What flower do you see?";
 "homePageExploreHeader" = "Explore flowers";
 "homePageViewAll" = "View All"; 
 "homePageRecentFlowers" = "Recent flowers";
@@ -18,6 +18,10 @@
 // Photo picker
 "takePhoto" = "Take Photo";
 "chooseFromLibrary" = "Choose From Library";
+
+// PlantInfo
+"plantInfoPoisoned" = "Poisoned";
+"plantInfoNotPoisoned" = "Not poisoned";
 
 // Family names
 "familyLiliaceae" = "Liliaceae";
