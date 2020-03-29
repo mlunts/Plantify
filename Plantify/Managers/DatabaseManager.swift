@@ -45,6 +45,9 @@ class DatabaseManager {
                     if !getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id).isEmpty {
 //                        plant.setProblemSolvers(array: getArraysDataFromJSON(jsonFileName: "problemSolvers", plantId: plant.id))
                     }
+                    
+                    plant.setImage()
+                    
                     plants.append(plant)
                 }
             } catch{

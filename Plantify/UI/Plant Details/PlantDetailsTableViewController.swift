@@ -66,7 +66,7 @@ extension PlantDetailsTableViewController: UITableViewDataSource, UITableViewDel
         switch PlantDetails.allCases[indexPath.row] {
         case .image:
             let cell: PlantImageTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setContent(image: flower.imageURL)
+            cell.setContent(flower: flower)
             
             return cell
         case .title:
