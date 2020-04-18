@@ -6,16 +6,12 @@ use_frameworks!
 def framework_pods
   pod 'SwiftyJSON', '~> 4.2'
   pod 'SwiftGen'
-end
-
-def helper_pods
-  pod 'Then'
-  pod 'SnapKit', '~> 4.0'
+  pod 'Moya'
+  pod 'SwiftLint'
 end
 
 def required_pods
   framework_pods
-  helper_pods
 end
 
 target 'Plantify' do
