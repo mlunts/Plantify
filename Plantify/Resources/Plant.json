@@ -1,24 +1,12 @@
 [
     {
-        "plantID": 1,
-        "plant_name": "Rosemary",
-        "botanical_name": "Rosmarinus officinalis",
-        "description": "Rosemary's evergreen foliage is a staple in any herb garden. Known for their wonderful flavoring in poultry dishes and other recipes, rosemary can also be grown as an ornamental. In areas where these plants are not winter hardy, they can be grown as an annual. Because of their Mediterannean heritage, these plants love hot and dry weather. Grow rosemary plants near paths and walkways to release their signature scent as you brush past them.",
-        "flower_time": "Late spring or early summer, Summer",
-        "poisoned": 0,
-        "side_effects": "No side effects are known when rosemary is used in designated therapeutic doses, properly harvested, prepared, and administered. Some persons, however, may be allergic to rosemary or its oils, and experience nausea and vomiting.",
-        "tribe_name": "Mentheae",
-        "order_name": "Lamiales",
-        "family_name": "Lamiaceae",
-        "image": "rosemary-flower-4.jpg"
-    },
-    {
         "plantID": 2,
         "plant_name": "Sunflower",
         "botanical_name": "Helianthus",
         "description": "Sunflower, any plant of the genus Helianthus of the family Asteraceae (aster family), annual or perennial herbs native to the New World and common throughout the United States. In cultivation, the flower heads, commonly having yellow rays, sometimes reach 1 ft (30 cm) in diameter. The common sunflower (H. annuus) is an annual, native from Minnesota to Texas and California and perhaps also in Central and South America. Native Americans cultivated the plant and found many uses for it: the nutritious seeds were eaten raw, made into a meal, or used as a source of hair oil; a yellow dye was obtained from the flower heads, and a fiber from the stalks; the roots of certain other species were eaten. Today the common sunflower is widely cultivated; it is particularly valued in the countries of the former Soviet Union, where the seeds are made into bread.",
         "flower_time": "Summer",
         "poisoned": 0,
+        "plant_type": "Annual Herb",
         "side_effects": "Sunflower is usually regarded as a safe herb or plant to use, be it as oil, food or medicine. People with known allergy to plants in the daisy family should be cautious when using the plant.",
         "tribe_name": "Heliantheae",
         "order_name": "Asterales",
@@ -30,13 +18,14 @@
         "plant_name": "Dandelion",
         "botanical_name": "Taraxacum",
         "description": "Dandelion (Taraxacum officinale ) is a common meadow herb of the Asteraceae or sunflower family. There are about 100 species of dandelion, and all are beneficial. This sun-loving beauty is a native of Greece, naturalized in temperate regions throughout the world, and familiar to nearly everyone. The perennial dandelion grows freely wherever it can find a bit of earth and a place in the sun. Dandelion's nutritive and medicinal qualities have been known for centuries.Dandelion's common name is derived from the French dent de lion, a reference to the irregular and jagged margins of the lance-shaped leaves.",
-        "flower_time": "Late winter or early spring, Spring, Summer, Fall",
+        "flower_time": "Spring",
         "poisoned": 0,
+        "plant_type": "Perennial Herb",
         "side_effects": "Dandelion is a safe and nutritious herb widely used throughout the world. No health hazards have been reported when dandelion is used in designated therapeutic doses. According to the PDR For Herbal Medicine, however, some \"superacid gastric complaints\" could be triggered by using the herb. Dandelion stems contain a liquid latex substance that may be irritating to the skin of senstitive persons.",
         "tribe_name": "Cichorieae",
         "order_name": "Asterales",
         "family_name": "Asteraceae",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Fnature%2Fflowers%2Fdandelion%2Fdandelion-flower&psig=AOvVaw0eGIA8Hx7uB2AsOrZ4hG7j&ust=1581346687361000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDwttDdxOcCFQAAAAAdAAAAABAD"
+        "image": "https://www.stickpng.com/assets/images/580b585b2edbce24c47b267b.png"
     },
     {
         "plantID": 4,
@@ -45,11 +34,12 @@
         "description": "Tulip, any plant of the large genus Tulipa, hardy, bulbous-rooted members of the family Liliaceae (lily family), indigenous to north temperate regions of the Old World from the Mediterranean to Japan and growing most abundantly on the steppes of Central Asia. Cultivated tulips, popular as garden and cut flowers and as potted plants, are chiefly varieties of T. gesneriana. They have deep, cup-shaped blossoms of various rich colors. Tulips having a peculiar color flecking or striping known as \"breaking\" were formerly very popular and were believed to be different varieties but now are thought to be the result of a virus disease carried by aphids. Many species tulips, typically with smaller, more open flowers, are also available horticulturally. \nTulip seeds are said to have been introduced into Europe in 1554 from Turkey, where they were possibly first cultivated. In the Netherlands in the 17th cent. the wild speculation on tulip bulbs became known as tulipomania: single bulbs sometimes brought several thousand dollars until the government was forced to interfere. Dumas told the story in his Black Tulip. The Netherlands is still the most important center of tulip culture. The tulip was so commonly used in the designs of the early Pennsylvania Dutch potters that their ware is often called tulip ware. Holland, Mich., a center of tulip growing in the United States, holds an annual tulip festival.",
         "flower_time": "Spring",
         "poisoned": 0,
+          "plant_type": "Perennial Herb",
         "side_effects": "No known side effects.",
         "tribe_name": "Lilieae",
         "order_name": "Liliales",
         "family_name": "Liliaceae",
-        "image": "tulip.jpeg"
+        "image": "https://66.media.tumblr.com/f0fc648c6cc29bc7f4af8857f8f3f923/tumblr_o46s9fZUA41rm6jd7o1_500.png"
     },
     {
         "plantID": 5,
@@ -58,6 +48,7 @@
         "description": "Lavender is a hardy perennial in the Lamiaciae, or mint, family. The herb is a Mediterranean native. There are many species of lavendula which vary somewhat in appearance and aromatic quality. English lavender, L. augustifolia, also known as true lavender, is commercially valuable in the perfume industry and is a mainstay of English country gardens. French lavender, L.stoechas, is the species most probably used in Roman times as a scenting agent in washing water . The species L. officinalis is the official species used in medicinal preparations, though all lavenders have medicinal properties in varying degrees.",
         "flower_time": "Spring, Summer",
         "poisoned": 0,
+          "plant_type": "Perennial Herb",
         "side_effects": "No known side effects.",
         "tribe_name": "Ocimeae",
         "order_name": "Lamiales",
@@ -71,11 +62,12 @@
         "description": "A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles. Flowers vary in size and shape and are usually large and showy, in colours ranging from white through yellows and reds. Most species are native to Asia, with smaller numbers native to Europe, North America, and northwestern Africa. Species, cultivars and hybrids are all widely grown for their beauty and often are fragrant. Roses have acquired cultural significance in many societies. Rose plants range in size from compact, miniature roses, to climbers that can reach seven meters in height. Different species hybridize easily, and this has been used in the development of the wide range of garden roses.",
         "flower_time": "Summer",
         "poisoned": 0,
+          "plant_type": "Perennial Herb",
         "side_effects": "No known side effects.",
         "tribe_name": "Roseae",
         "order_name": "Rosales",
         "family_name": "Rosaceae",
-        "image": "rose.jpg"
+        "image": "https://www.pngonly.com/wp-content/uploads/2017/06/Rose-Pink-Color-PNG.png"
     },
     {
         "plantID": 7,
@@ -84,23 +76,11 @@
         "description": "Daisy, name for several common wildflowers of the family Asteraceae (aster family). The daisy of literature, the true daisy, is Bellis perennis, called in the United States English daisy. This is a low European plant, cultivated in the United States mostly in the double form, with heads of white, pink, or red flowers. The English daisy, which closes at night, has long been considered the flower of children and of innocence. A purple species native to the lower Mississippi basin is called Western daisy (Astranthum or Bellis integrifolium). The common, often weedy, daisy of the United States (Chrysanthemum leucanthemum), called also white, or oxeye, daisy, is native to Europe but naturalized in America.",
         "flower_time": "Spring, Summer, Fall",
         "poisoned": 0,
+        "plant_type": "Perennial Herb",
         "side_effects": "There are no reports of contraindications or side effects when the herb is used properly. People with known allergic reactions to plants belonging the Asteraceae family should handle daisies with care.",
         "tribe_name": "Aster",
         "order_name": "Asterales",
         "family_name": "Asteraceae",
         "image": "https://cdn.pixabay.com/photo/2019/07/19/00/15/shasta-daisy-4347653_960_720.png"
-    },
-    {
-        "plantID": 8,
-        "plant_name": "Ranunculus",
-        "botanical_name": "Ranunculus",
-        "description": "Ranunculus is a genus of about 500 species of flowering plants in the family Ranunculaceae. Members of the genus include the buttercups, spearworts and water crowfoots. The petals are often highly lustrous, especially in yellow species, owing to a special coloration mechanism: the petal's upper surface is very smooth causing a mirror-like reflection.",
-        "flower_time": "Spring, Late spring or early summer",
-        "poisoned": 1,
-        "side_effects": "All Ranunculus(buttercup) species are poisonous when eaten fresh, but their acrid taste and the blistering of the mouth caused by their poison means they are usually left uneaten. Poisoning in livestock can occur where buttercups are abundant in overgrazed fields where little other edible plant growth is left, and the animals eat them out of desperation. Symptoms of poisoning include bloody diarrhea, excessive salivation, colic, and severe blistering of the mouth, mucous membranes and gastrointestinal tract.",
-        "tribe_name": "Ranunculeae",
-        "order_name": "Ranunculales",
-        "family_name": "Ranunculaceae",
-        "image": "Ranunculus.jpg"
-    },
+    }
 ]

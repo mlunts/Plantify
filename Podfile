@@ -8,8 +8,14 @@ def framework_pods
   pod 'SwiftGen'
 end
 
+def helper_pods
+  pod 'Then'
+  pod 'SnapKit', '~> 4.0'
+end
+
 def required_pods
   framework_pods
+  helper_pods
 end
 
 target 'Plantify' do

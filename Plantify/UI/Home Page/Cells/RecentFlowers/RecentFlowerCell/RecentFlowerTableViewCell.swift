@@ -9,7 +9,7 @@
 import UIKit
 
 class RecentFlowerTableViewCell: UITableViewCell {
-
+    
     // MARK: - properties
     
     @IBOutlet private  weak var flowerImageView: UIImageView!
@@ -23,11 +23,11 @@ class RecentFlowerTableViewCell: UITableViewCell {
         
         setStyle()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        selectionStyle = .none
     }
     
     // MARK: - public

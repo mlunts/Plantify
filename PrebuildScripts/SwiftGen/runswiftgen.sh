@@ -14,5 +14,5 @@ fonts -t swift4 "$RSROOT/Fonts" \
 
 "$PODS_ROOT/SwiftGen/bin/swiftgen" \
 ib -t scenes-swift4 "Plantify" \
---output "$RSROOT/Helpers/Scenes.swift"
+--output "$RSROOT/Helpers/Scene.swift"
 

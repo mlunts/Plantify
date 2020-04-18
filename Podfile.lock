@@ -1,20 +1,28 @@
 PODS:
+  - SnapKit (4.2.0)
   - SwiftGen (6.1.0)
   - SwiftyJSON (4.3.0)
+  - Then (2.6.0)
 
 DEPENDENCIES:
+  - SnapKit (~> 4.0)
   - SwiftGen
   - SwiftyJSON (~> 4.2)
+  - Then
 
 SPEC REPOS:
   trunk:
+    - SnapKit
     - SwiftGen
     - SwiftyJSON
+    - Then
 
 SPEC CHECKSUMS:
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 08d71b377610008d5ed640d993c72def814fdd71
+PODFILE CHECKSUM: 058c6467b33f7b6917b9cf6fb86b617b8b8c48f9
 
 COCOAPODS: 1.8.4

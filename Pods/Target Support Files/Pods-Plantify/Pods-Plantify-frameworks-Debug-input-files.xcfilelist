@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Plantify/Pods-Plantify-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework
