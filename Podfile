@@ -6,6 +6,8 @@ use_frameworks!
 def framework_pods
   pod 'SwiftyJSON', '~> 4.2'
   pod 'SwiftGen'
+  pod 'Moya'
+  pod 'SwiftLint'
 end
 
 def helper_pods

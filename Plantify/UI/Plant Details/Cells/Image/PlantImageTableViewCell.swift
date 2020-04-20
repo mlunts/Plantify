@@ -12,7 +12,7 @@ class PlantImageTableViewCell: UITableViewCell {
 
     // MARK: - properties
     
-    private var flower: Plant!
+    private var flower: Flower!
     
     @IBOutlet private weak var flowerImageView: UIImageView!
     
@@ -24,7 +24,7 @@ class PlantImageTableViewCell: UITableViewCell {
 
     // MARK: - public
     
-    func setContent(flower: Plant) {
+    func setContent(flower: Flower) {
         self.flower = flower
         
         updateView()
@@ -33,11 +33,7 @@ class PlantImageTableViewCell: UITableViewCell {
     // MARK: - private
     
     func updateView() {
-        if let image = flower.image {
-            flowerImageView.image = image
-        } else {
-            flowerImageView.setCustomImage(flower.imageURL)
-        }
+        flowerImageView.setCustomImage(flower.image)
         
         backgroundColor = ColorRandomiser().getColor()
     }

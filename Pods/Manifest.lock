@@ -1,28 +1,42 @@
 PODS:
+  - Alamofire (5.1.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
   - SnapKit (4.2.0)
   - SwiftGen (6.1.0)
+  - SwiftLint (0.39.2)
   - SwiftyJSON (4.3.0)
   - Then (2.6.0)
 
 DEPENDENCIES:
+  - Moya
   - SnapKit (~> 4.0)
   - SwiftGen
+  - SwiftLint
   - SwiftyJSON (~> 4.2)
   - Then
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Moya
     - SnapKit
     - SwiftGen
+    - SwiftLint
     - SwiftyJSON
     - Then
 
 SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 058c6467b33f7b6917b9cf6fb86b617b8b8c48f9
+PODFILE CHECKSUM: c777e8ac33ad1fadcb956743522a88700a9a108f
 
 COCOAPODS: 1.8.4

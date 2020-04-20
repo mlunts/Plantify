@@ -76,20 +76,20 @@ class HomePageTableViewController: BaseViewController {
     }
     
     private func classifyFlower() {
-        ClassifierManager.shared.classifyFlower(for: image, completaion: { result in
-            if let result = result {
-                RecentFlowersManager.shared.addFlower(result)
-                
-                let vc = PlantDetailsViewController.instantiate(with: result, source: .identification)
-                
-                self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
-                
-                self.navigationController?.present(vc, animated: true, completion: nil)
-                
-            } else {
-                self.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
-            }
-        })
+//        ClassifierManager.shared.classifyFlower(for: image, completaion: { result in
+//            if let result = result {
+//                RecentFlowersManager.shared.addFlower(result)
+//
+//                let vc = PlantDetailsViewController.instantiate(with: result, source: .identification)
+//
+//                self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+//
+//                self.navigationController?.present(vc, animated: true, completion: nil)
+//
+//            } else {
+//                self.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
+//            }
+//        })
     }
 }
 
@@ -155,7 +155,7 @@ extension HomePageTableViewController: HeaderTableViewCellDelegate {
 }
 
 extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
-    func recentFlowerSelected(_ flower: Plant) {
+    func recentFlowerSelected(_ flower: Flower) {
         let vc = PlantDetailsViewController.instantiate(with: flower, source: .list)
         
         self.navigationController?.pushViewController(vc, animated: true)

@@ -1,5 +1,5 @@
 //
-//  ExploreFamilyCollectionViewCell.swift
+//  ExploreOrdersCollectionViewCell.swift
 //  Plantify
 //
 //  Created by Marina Lunts on 06.02.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExploreFamilyCollectionViewCell: UICollectionViewCell {
+class ExploreOrdersCollectionViewCell: UICollectionViewCell {
 
     // MARK: - properties
 
@@ -26,11 +26,11 @@ class ExploreFamilyCollectionViewCell: UICollectionViewCell {
 
     // MARK: - public
     
-    func setContent(family: Family) {
-        familyNameLabel.text = family.name
-        flowerImageView.image = family.image
+    func setContent(with order: Order) {
+        familyNameLabel.text = order.name
+        flowerImageView.image = UIImage().getImage(from: order.image)
         
-        backgroundColor = family.backgroundColor
+        backgroundColor = ColorRandomiser().getColor()
     }
 
     // MARK: - private
