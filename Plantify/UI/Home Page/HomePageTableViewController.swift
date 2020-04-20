@@ -29,6 +29,9 @@ class HomePageTableViewController: BaseViewController {
     // MARK: - private
     
     private func setupBehaviour() {
+        homePageTableView.isHidden = true
+        showActivityIndicator(true)
+        
         setNib("HeaderTableViewCell")
         setNib("ExploreTableViewCell")
         setNib("RecentFlowersTableViewCell")
@@ -108,6 +111,7 @@ extension HomePageTableViewController: UITableViewDelegate, UITableViewDataSourc
             return cell
         case 1:
             let cell: ExploreTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             
             return cell
             
@@ -168,4 +172,19 @@ extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
         homePageTableView.endUpdates()
     }
     
+}
+
+extension HomePageTableViewController: ExploreTableViewCellDelegate {
+    func goToOrder(_ order: Order) {
+        //
+    }
+    
+    func goToOrders(_ orders: [Order]) {
+        //
+    }
+    
+    func endLoading() {
+        homePageTableView.isHidden = false
+        showActivityIndicator(false)
+    }
 }

@@ -8,15 +8,23 @@
 
 import UIKit
 
+protocol ExploreTableViewCellDelegate: class {
+    func endLoading()
+    func goToOrders(_ orders: [Order])
+    func goToOrder(_ order: Order)
+}
+
 class ExploreTableViewCell: UITableViewCell {
     
     // MARK: - properties
+    weak var delegate: ExploreTableViewCellDelegate?
     
     private var orders: [Order] = []
     
     @IBOutlet private weak var exploreHeaderLabel: UILabel!
-    @IBOutlet private weak var viewAllLabel: UILabel!
+    @IBOutlet private weak var viewAllButton: UIButton!
     @IBOutlet private weak var ordersCollectionView: UICollectionView!
+    @IBOutlet private weak var errorLabel: UILabel!
     
     // MARK: - override
     
@@ -37,8 +45,9 @@ class ExploreTableViewCell: UITableViewCell {
     // MARK: - private
     
     private func setContent() {
-        viewAllLabel.text = L10n.homePageViewAll
+        viewAllButton.setTitle(L10n.homePageViewAll, for: .normal)
         exploreHeaderLabel.text = L10n.homePageExploreHeader
+        errorLabel.text = L10n.errorNoServerAnswer
     }
     
     private func setBehaviour() {
@@ -56,36 +65,35 @@ class ExploreTableViewCell: UITableViewCell {
             
             self?.orders = orders
             self?.ordersCollectionView.reloadData()
+            self?.delegate?.endLoading()
+            self?.setNoInternetBehaviour(false)
             
             }, onFailure: { [weak self] (error, _) in
-//                self?.showActivityIndicator(false)
-//
-//                guard let error = error as? CustomError else {
-//                    self?.alert(message: CustomError.somethingWrong.message)
-//                    return
-//                }
-//
-//                if error == .sessionIsTimeOut {
-//                    self?.alert(message: error.message)
-//                    UserManager.shared.getNewSessionID { (success) in
-//                        if success {
-//                            self?.fetchRooms()
-//                        }
-//                    }
-//                } else { self?.alert(message: error.message) }
+                self?.setNoInternetBehaviour(true)
+                self?.setNoInternetBehaviour(false)
         })
-        
     }
-
+    
     private func registerCell() {
         ordersCollectionView.registerCell(ExploreOrdersCollectionViewCell.self)
+    }
+    
+    private func setNoInternetBehaviour(_ value: Bool) {
+        errorLabel.isHidden = !value
+        ordersCollectionView.isHidden = value
+    }
+    
+    // MARK: - actions
+    
+    @IBAction private func viewAllButtonClicked(_ sender: Any) {
+        delegate?.goToOrders(orders)
     }
     
 }
 
 extension ExploreTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return orders.count
+        return orders.count > 4 ? 4 : orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -96,5 +104,7 @@ extension ExploreTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.goToOrder(orders[indexPath.row])
+    }
 }
