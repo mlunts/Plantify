@@ -23,6 +23,8 @@ internal enum L10n {
   internal static let emptyString = L10n.tr("Localizable", "emptyString")
   /// Cannot identify the flower. Try again with another image.
   internal static let errorNoClassifiedFlower = L10n.tr("Localizable", "errorNoClassifiedFlower")
+  /// No server response received
+  internal static let errorNoServerAnswer = L10n.tr("Localizable", "errorNoServerAnswer")
   /// Oops!
   internal static let errorOops = L10n.tr("Localizable", "errorOops")
   /// Asteraceae
