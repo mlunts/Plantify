@@ -12,7 +12,7 @@ class ExploreTableViewCell: UITableViewCell {
     
     // MARK: - properties
     
-    private var families: [Family] = []
+    private var families: [Order] = []
     
     @IBOutlet private weak var exploreHeaderLabel: UILabel!
     @IBOutlet private weak var viewAllLabel: UILabel!
@@ -49,10 +49,10 @@ class ExploreTableViewCell: UITableViewCell {
     }
     
     private func setFamilies() {
-        families.append(Family(name: L10n.familyAsteraceae, image: Asset.familyAsteraceae.image, backgroundColor: Asset.petiteOrchid.color))
-        families.append(Family(name: L10n.familyLiliaceae, image: Asset.familyLiliaceae.image, backgroundColor: Asset.paarl.color))
-        families.append(Family(name: L10n.familyRosaceae, image: Asset.familyRosaceae.image, backgroundColor: Asset.tumbleweed.color))
-        families.append(Family(name: L10n.familyRanunculaceae, image: Asset.familyRanunculaceae.image, backgroundColor: Asset.shoking.color))
+//        families.append(Order(name: L10n.familyAsteraceae, image: Asset.familyAsteraceae.image, backgroundColor: Asset.petiteOrchid.color))
+//        families.append(Order(name: L10n.familyLiliaceae, image: Asset.familyLiliaceae.image, backgroundColor: Asset.paarl.color))
+//        families.append(Order(name: L10n.familyRosaceae, image: Asset.familyRosaceae.image, backgroundColor: Asset.tumbleweed.color))
+//        families.append(Order(name: L10n.familyRanunculaceae, image: Asset.familyRanunculaceae.image, backgroundColor: Asset.shoking.color))
         
         familiesCollectionView.reloadData()
     }

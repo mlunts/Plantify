@@ -32,10 +32,10 @@ class RecentFlowerTableViewCell: UITableViewCell {
     
     // MARK: - public
     
-    func setContent(with flower: Plant) {
+    func setContent(with flower: Flower) {
         nameLabel.text = flower.name
         subTitleLabel.text = flower.information
-        flowerImageView.setCustomImage(flower.imageURL)
+        flowerImageView.setCustomImage(flower.image)
     }
     
     // MARK: - private

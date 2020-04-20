@@ -27,7 +27,7 @@ class PlantBasicInformationTableViewCell: UITableViewCell {
     
     // MARK: - properties
     
-    private var flower: Plant!
+    private var flower: Flower!
     @IBOutlet private weak var basicInfoCollectionView: UICollectionView!
     
     // MARK: - override
@@ -40,7 +40,7 @@ class PlantBasicInformationTableViewCell: UITableViewCell {
     
     // MARK: - public
     
-    func setFlower(_ flower: Plant) {
+    func setFlower(_ flower: Flower) {
         self.flower = flower
     }
     
@@ -70,9 +70,9 @@ extension PlantBasicInformationTableViewCell: UICollectionViewDelegate, UICollec
         
         switch cellType {
         case .type:
-            cell.setContent(text: flower.plantType, picture: cellType.systemPicture)
+            cell.setContent(text: flower.type, picture: cellType.systemPicture)
         case .flowerTime:
-            cell.setContent(text: flower.flowerTime, picture: cellType.systemPicture)
+            cell.setContent(text: flower.season, picture: cellType.systemPicture)
         case .poisoned:
             cell.setContent(text: flower.poisonedString(), picture: cellType.systemPicture)
         }

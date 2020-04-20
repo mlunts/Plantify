@@ -14,9 +14,9 @@ class RecentFlowersManager {
     
     // MARK: - public
     
-    func addFlower(_ flower: Plant) {
+    func addFlower(_ flower: Flower) {
         guard var flowers = getFlowers() else {
-            var flowers = [Plant]()
+            var flowers = [Flower]()
             flowers.append(flower)
             
             saveToUserDefaults(flowers)
@@ -35,23 +35,23 @@ class RecentFlowersManager {
         }
     }
     
-    func getFlowers() -> [Plant]? {
-        if let data = UserDefaults.standard.data(forKey: "recentFlowers"),
-            let recentFlowers = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Plant] {
-            return recentFlowers
-        } else {
+    func getFlowers() -> [Flower]? {
+//        if let data = UserDefaults.standard.data(forKey: "recentFlowers"),
+//            let recentFlowers = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Flower] {
+//            return recentFlowers
+//        } else {
             return nil
-        }
+//        }
     }
     
     // MARK: - private
     
-    private func saveToUserDefaults(_ flowers: [Plant]) {
+    private func saveToUserDefaults(_ flowers: [Flower]) {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: flowers)
         UserDefaults.standard.set(encodedData, forKey: "recentFlowers")
     }
     
-    private func isPlantExist(_ flowers: [Plant], selectedFlower: Plant) -> Bool {
+    private func isPlantExist(_ flowers: [Flower], selectedFlower: Flower) -> Bool {
         return flowers.contains(where: { $0.id == selectedFlower.id })
     }
 }

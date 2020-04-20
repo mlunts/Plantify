@@ -26,11 +26,11 @@ class ExploreFamilyCollectionViewCell: UICollectionViewCell {
 
     // MARK: - public
     
-    func setContent(family: Family) {
+    func setContent(family: Order) {
         familyNameLabel.text = family.name
-        flowerImageView.image = family.image
+        flowerImageView.image = UIImage().getImage(from: family.image)
         
-        backgroundColor = family.backgroundColor
+        backgroundColor = ColorRandomiser().getColor()
     }
 
     // MARK: - private

@@ -10,7 +10,7 @@ import UIKit
 
 protocol RecentFlowersTableViewCellDelegate: class {
     func setCellHeight(_ height: CGFloat)
-    func recentFlowerSelected(_ flower: Plant)
+    func recentFlowerSelected(_ flower: Flower)
 }
 
 class RecentFlowersTableViewCell: UITableViewCell {
@@ -22,7 +22,7 @@ class RecentFlowersTableViewCell: UITableViewCell {
     private let headerHeight: CGFloat = 80
     private let cellHeight: CGFloat = 85
     
-    private var flowers: [Plant]? = []
+    private var flowers: [Flower]? = []
     
     @IBOutlet private weak var recentFlowersHeaderLabel: UILabel!
     @IBOutlet private weak var noRecentFlowersLabel: UILabel!

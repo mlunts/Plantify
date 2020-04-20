@@ -17,7 +17,7 @@ class PlantDetailsViewController: UIViewController {
     // MARK: - properties
     
     private lazy var plantDetailsTableViewController = PlantDetailsTableViewController.instantiate(with: flower, source: source)
-    private var flower: Plant!
+    private var flower: Flower!
     private var source: PlantDetailsSource!
     
     @IBOutlet private weak var plantDetailsTableViewContainer: UIView!
@@ -34,7 +34,7 @@ class PlantDetailsViewController: UIViewController {
     
     // MARK: - public
     
-    static func instantiate(with flower: Plant, source: PlantDetailsSource) -> UIViewController {
+    static func instantiate(with flower: Flower, source: PlantDetailsSource) -> UIViewController {
         let vc = StoryboardScene.PlantDetails.plantDetailsViewController.instantiate()
         
         vc.flower = flower

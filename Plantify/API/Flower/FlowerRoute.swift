@@ -1,18 +1,18 @@
 //
-//  FlowersListRoute.swift
+//  FlowerRoute.swift
 //  Plantify
 //
-//  Created by Marina Lunts on 18.04.2020.
+//  Created by Marina Lunts on 19.04.2020.
 //  Copyright © 2020 earine. All rights reserved.
 //
 
 import Moya
 
-enum FlowersListRoute {
-    case listOfFlowers
+enum FlowerRoute {
+    case getFlower(id: Int)
 }
 
-extension FlowersListRoute: TargetType {
+extension FlowerRoute: TargetType {
     
     var baseURL: URL {
 //            return URL(string: "\(NetworkManager.baseServerPath)/api/orders")!
@@ -21,7 +21,7 @@ extension FlowersListRoute: TargetType {
     
     var path: String {
         switch self {
-        case .listOfFlowers:
+        case .getFlower:
 //            return "/all/flowers"
             return ""
         }
@@ -29,7 +29,7 @@ extension FlowersListRoute: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .listOfFlowers:
+        case .getFlower:
             return .post
         }
     }
@@ -40,7 +40,9 @@ extension FlowersListRoute: TargetType {
     
     var task: Task {
         switch self {
-        case .listOfFlowers:
+//        case .getFlower(let id):
+//            return .requestParameters(parameters: ["id": id], encoding: JSONEncoding.default)
+        case .getFlower:
             return .requestPlain
         }
     }
@@ -54,7 +56,7 @@ extension FlowersListRoute: TargetType {
     }
 }
 
-extension FlowersListRoute: CachePolicyGettable {
+extension Flower: CachePolicyGettable {
     var cachePolicy: URLRequest.CachePolicy {
         return .useProtocolCachePolicy
     }
