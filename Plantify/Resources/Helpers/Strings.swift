@@ -27,14 +27,6 @@ internal enum L10n {
   internal static let errorNoServerAnswer = L10n.tr("Localizable", "errorNoServerAnswer")
   /// Oops!
   internal static let errorOops = L10n.tr("Localizable", "errorOops")
-  /// Asteraceae
-  internal static let familyAsteraceae = L10n.tr("Localizable", "familyAsteraceae")
-  /// Liliaceae
-  internal static let familyLiliaceae = L10n.tr("Localizable", "familyLiliaceae")
-  /// Ranunculaceae
-  internal static let familyRanunculaceae = L10n.tr("Localizable", "familyRanunculaceae")
-  /// Rosaceae
-  internal static let familyRosaceae = L10n.tr("Localizable", "familyRosaceae")
   /// Explore flowers
   internal static let homePageExploreHeader = L10n.tr("Localizable", "homePageExploreHeader")
   /// What flower do you see?
@@ -47,6 +39,8 @@ internal enum L10n {
   internal static let homePageViewAll = L10n.tr("Localizable", "homePageViewAll")
   /// No title
   internal static let noTitleText = L10n.tr("Localizable", "noTitleText")
+  /// Orders
+  internal static let ordersPageHeader = L10n.tr("Localizable", "ordersPageHeader")
   /// Not poisoned
   internal static let plantInfoNotPoisoned = L10n.tr("Localizable", "plantInfoNotPoisoned")
   /// Poisoned

@@ -26,6 +26,13 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
   }
+  internal enum Orders: StoryboardType {
+    internal static let storyboardName = "Orders"
+
+    internal static let ordersCollectionViewController = SceneType<Plantify.OrdersCollectionViewController>(storyboard: Orders.self, identifier: "OrdersCollectionViewController")
+
+    internal static let ordersViewController = SceneType<Plantify.OrdersViewController>(storyboard: Orders.self, identifier: "OrdersViewController")
+  }
   internal enum PlantDetails: StoryboardType {
     internal static let storyboardName = "PlantDetails"
 

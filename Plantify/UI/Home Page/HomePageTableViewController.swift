@@ -180,7 +180,9 @@ extension HomePageTableViewController: ExploreTableViewCellDelegate {
     }
     
     func goToOrders(_ orders: [Order]) {
-        //
+        let vc = OrdersViewController.instantiate(with: orders)
+               
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func endLoading() {

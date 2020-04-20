@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders View Controller-->
+        <scene sceneID="hIp-2F-5df">
+            <objects>
+                <viewController storyboardIdentifier="OrdersViewController" id="zEn-xl-FbA" customClass="OrdersViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0h9-fw-qp7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBN-UV-OLc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ECK-Ko-Vk8" firstAttribute="bottom" secondItem="TBN-UV-OLc" secondAttribute="bottom" id="0Tb-45-e4F"/>
+                            <constraint firstItem="TBN-UV-OLc" firstAttribute="top" secondItem="ECK-Ko-Vk8" secondAttribute="top" id="LpL-m4-iFE"/>
+                            <constraint firstItem="ECK-Ko-Vk8" firstAttribute="trailing" secondItem="TBN-UV-OLc" secondAttribute="trailing" id="S7G-EA-da9"/>
+                            <constraint firstItem="TBN-UV-OLc" firstAttribute="leading" secondItem="ECK-Ko-Vk8" secondAttribute="leading" id="qy1-v7-fgi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ECK-Ko-Vk8"/>
+                    </view>
+                    <connections>
+                        <outlet property="ordersCollectionViewContainer" destination="TBN-UV-OLc" id="JSp-De-ncO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OK9-hL-r8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="-37"/>
+        </scene>
+        <!--Orders Collection View Controller-->
+        <scene sceneID="nBt-nn-6SS">
+            <objects>
+                <viewController storyboardIdentifier="OrdersCollectionViewController" id="nil-iW-hlc" customClass="OrdersCollectionViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFY-2k-oRa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIe-dn-KCX">
+                                <rect key="frame" x="10" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0u3-Ei-S2F">
+                                    <size key="itemSize" width="128" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nil-iW-hlc" id="KPy-1m-xBn"/>
+                                    <outlet property="delegate" destination="nil-iW-hlc" id="Oh8-UH-qVo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WIe-dn-KCX" secondAttribute="bottom" id="2f6-17-8Vl"/>
+                            <constraint firstAttribute="trailing" secondItem="WIe-dn-KCX" secondAttribute="trailing" constant="10" id="ZHG-oe-hsy"/>
+                            <constraint firstItem="WIe-dn-KCX" firstAttribute="height" secondItem="gFY-2k-oRa" secondAttribute="height" id="aNO-2U-6f8"/>
+                            <constraint firstItem="WIe-dn-KCX" firstAttribute="leading" secondItem="gFY-2k-oRa" secondAttribute="leading" constant="10" id="rc2-t7-u2F"/>
+                            <constraint firstItem="WIe-dn-KCX" firstAttribute="top" secondItem="gFY-2k-oRa" secondAttribute="top" id="viL-jN-eeO"/>
+                            <constraint firstItem="WIe-dn-KCX" firstAttribute="width" secondItem="gFY-2k-oRa" secondAttribute="width" id="zfv-2l-Icx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ordersCollectionView" destination="WIe-dn-KCX" id="Soo-0Z-Cot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfO-Sa-3SK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-38"/>
+        </scene>
+    </scenes>
+</document>

@@ -24,8 +24,5 @@
 "plantInfoPoisoned" = "Poisoned";
 "plantInfoNotPoisoned" = "Not poisoned";
 
-// Family names
-"familyLiliaceae" = "Liliaceae";
-"familyAsteraceae" = "Asteraceae";
-"familyRosaceae" = "Rosaceae";
-"familyRanunculaceae" = "Ranunculaceae";
+// Orders
+"ordersPageHeader" = "Orders";
