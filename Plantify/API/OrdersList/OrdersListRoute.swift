@@ -16,7 +16,7 @@ extension OrdersListRoute: TargetType {
     
     var baseURL: URL {
 //            return URL(string: "\(NetworkManager.baseServerPath)/api/orders")!
-        return URL(string: "https://api.npoint.io/66730a334e0d6c93f14d")!
+        return URL(string: "https://api.npoint.io/3e66182204485d18d3aa")!
     }
     
     var path: String {
@@ -30,7 +30,7 @@ extension OrdersListRoute: TargetType {
     var method: Moya.Method {
         switch self {
         case .listOfOrders:
-            return .post
+            return .get
         }
     }
     

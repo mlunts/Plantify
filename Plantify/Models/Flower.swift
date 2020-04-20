@@ -24,7 +24,7 @@ class Flower: Codable {
     var type: String
     //    public var generalUse = [String]()
     //    public var problemSolvers = [String]()
-    var image: String = "https://lh3.googleusercontent.com/proxy/ZgGRe4DPVnrN_WqbRa_e94BjKOlETNtiAiDSziezlXg6SZitkeNYwqqUP4o8doDtRcgDfGaNcnoITAFGqpCGtikXiHiWDukIuTlth2Rs2wVbudm5Pu_xllMo2JvD-iR6TiE_76y4jg"
+    var image: String
     
     init() {
         self.id = 0

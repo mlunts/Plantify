@@ -12,11 +12,11 @@ class ExploreTableViewCell: UITableViewCell {
     
     // MARK: - properties
     
-    private var families: [Order] = []
+    private var orders: [Order] = []
     
     @IBOutlet private weak var exploreHeaderLabel: UILabel!
     @IBOutlet private weak var viewAllLabel: UILabel!
-    @IBOutlet private weak var familiesCollectionView: UICollectionView!
+    @IBOutlet private weak var ordersCollectionView: UICollectionView!
     
     // MARK: - override
     
@@ -24,8 +24,8 @@ class ExploreTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         setBehaviour() 
-        setFamilies()
         setContent()
+        fetchOrders()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,36 +42,56 @@ class ExploreTableViewCell: UITableViewCell {
     }
     
     private func setBehaviour() {
-        familiesCollectionView.delegate = self
-        familiesCollectionView.dataSource = self
+        ordersCollectionView.delegate = self
+        ordersCollectionView.dataSource = self
         
         registerCell()
     }
     
-    private func setFamilies() {
-//        families.append(Order(name: L10n.familyAsteraceae, image: Asset.familyAsteraceae.image, backgroundColor: Asset.petiteOrchid.color))
-//        families.append(Order(name: L10n.familyLiliaceae, image: Asset.familyLiliaceae.image, backgroundColor: Asset.paarl.color))
-//        families.append(Order(name: L10n.familyRosaceae, image: Asset.familyRosaceae.image, backgroundColor: Asset.tumbleweed.color))
-//        families.append(Order(name: L10n.familyRanunculaceae, image: Asset.familyRanunculaceae.image, backgroundColor: Asset.shoking.color))
+    private func fetchOrders() {
+        NetworkManager.shared.listOfOrders(onSuccess: { [weak self] (orders, _) in
+            guard let orders = orders else {
+                return
+            }
+            
+            self?.orders = orders
+            self?.ordersCollectionView.reloadData()
+            
+            }, onFailure: { [weak self] (error, _) in
+//                self?.showActivityIndicator(false)
+//
+//                guard let error = error as? CustomError else {
+//                    self?.alert(message: CustomError.somethingWrong.message)
+//                    return
+//                }
+//
+//                if error == .sessionIsTimeOut {
+//                    self?.alert(message: error.message)
+//                    UserManager.shared.getNewSessionID { (success) in
+//                        if success {
+//                            self?.fetchRooms()
+//                        }
+//                    }
+//                } else { self?.alert(message: error.message) }
+        })
         
-        familiesCollectionView.reloadData()
     }
-    
+
     private func registerCell() {
-        familiesCollectionView.registerCell(ExploreFamilyCollectionViewCell.self)
+        ordersCollectionView.registerCell(ExploreOrdersCollectionViewCell.self)
     }
     
 }
 
 extension ExploreTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return families.count
+        return orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ExploreFamilyCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: ExploreOrdersCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        cell.setContent(family: families[indexPath.row])
+        cell.setContent(with: orders[indexPath.row])
         
         return cell
     }

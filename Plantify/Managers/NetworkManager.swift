@@ -40,7 +40,6 @@ class NetworkManager {
             case .success(let response):
                 self?.decoding(response.data, response, onSuccess: success, onFailure: failure)
             case .failure(let error):
-                
                 do {
                     if let url = URL(string: target.baseURL.absoluteString + target.path),
                         let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {

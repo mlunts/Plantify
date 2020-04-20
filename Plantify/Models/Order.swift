@@ -11,7 +11,7 @@ import UIKit
 class Order: Codable {
     let name: String
     let image: String
-    let flowers: [Flower]
+//    let flowers: [Flower]
 //    init(name: String, image: UIImage, backgroundColor: UIColor) {
 //        self.name = name
 //        self.image = image
