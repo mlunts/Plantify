@@ -63,7 +63,7 @@ class ExploreTableViewCell: UITableViewCell {
                 return
             }
             
-            self?.orders = orders
+            self?.orders = orders.sorted(by: { $0.name < $1.name })
             self?.ordersCollectionView.reloadData()
             self?.delegate?.endLoading()
             self?.setNoInternetBehaviour(false)

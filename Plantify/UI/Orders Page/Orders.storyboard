@@ -46,9 +46,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIe-dn-KCX">
-                                <rect key="frame" x="10" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0u3-Ei-S2F">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="0u3-Ei-S2F">
                                     <size key="itemSize" width="128" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -64,12 +64,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="WIe-dn-KCX" secondAttribute="bottom" id="2f6-17-8Vl"/>
-                            <constraint firstAttribute="trailing" secondItem="WIe-dn-KCX" secondAttribute="trailing" constant="10" id="ZHG-oe-hsy"/>
+                            <constraint firstAttribute="trailing" secondItem="WIe-dn-KCX" secondAttribute="trailing" constant="20" id="ZHG-oe-hsy"/>
                             <constraint firstItem="WIe-dn-KCX" firstAttribute="height" secondItem="gFY-2k-oRa" secondAttribute="height" id="aNO-2U-6f8"/>
-                            <constraint firstItem="WIe-dn-KCX" firstAttribute="leading" secondItem="gFY-2k-oRa" secondAttribute="leading" constant="10" id="rc2-t7-u2F"/>
+                            <constraint firstItem="WIe-dn-KCX" firstAttribute="leading" secondItem="gFY-2k-oRa" secondAttribute="leading" constant="20" id="rc2-t7-u2F"/>
                             <constraint firstItem="WIe-dn-KCX" firstAttribute="top" secondItem="gFY-2k-oRa" secondAttribute="top" id="viL-jN-eeO"/>
-                            <constraint firstItem="WIe-dn-KCX" firstAttribute="width" secondItem="gFY-2k-oRa" secondAttribute="width" id="zfv-2l-Icx"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OmO-CW-U13"/>
                     </view>
                     <connections>
                         <outlet property="ordersCollectionView" destination="WIe-dn-KCX" id="Soo-0Z-Cot"/>

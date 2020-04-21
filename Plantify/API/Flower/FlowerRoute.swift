@@ -15,15 +15,13 @@ enum FlowerRoute {
 extension FlowerRoute: TargetType {
     
     var baseURL: URL {
-//            return URL(string: "\(NetworkManager.baseServerPath)/api/orders")!
-        return URL(string: "https://api.npoint.io/66730a334e0d6c93f14d")!
+return URL(string: "\(NetworkManager.baseServerPath)/api")!
     }
     
     var path: String {
         switch self {
         case .getFlower:
-//            return "/all/flowers"
-            return ""
+            return "/flowers"
         }
     }
     
@@ -40,10 +38,8 @@ extension FlowerRoute: TargetType {
     
     var task: Task {
         switch self {
-//        case .getFlower(let id):
-//            return .requestParameters(parameters: ["id": id], encoding: JSONEncoding.default)
-        case .getFlower:
-            return .requestPlain
+        case .getFlower(let id):
+            return .requestParameters(parameters: ["": id], encoding: JSONEncoding.default)
         }
     }
     

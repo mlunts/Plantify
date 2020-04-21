@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Flower: Codable {
+struct Flower: Codable {
     
     var id: Int
     var name: String

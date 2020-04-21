@@ -26,10 +26,6 @@ class HomePageTableViewController: BaseViewController {
         setStyle()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     // MARK: - private
     
     private func setupBehaviour() {
@@ -83,19 +79,28 @@ class HomePageTableViewController: BaseViewController {
     }
     
     private func classifyFlower() {
-        let imageData: Data = image.pngData()!
-        let imageStr = imageData.base64EncodedString()
+        let imageData = image.jpegData(compressionQuality: 1.0)
+        let imageStr = imageData?.base64EncodedString()
         
-        NetworkManager.shared.classifyFlower(from: imageStr, onSuccess: { [weak self] (flower, _) in
+        NetworkManager.shared.classifyFlower(from: imageStr!, onSuccess: { [weak self] (flower, _) in
             guard let flower = flower else {
+                self?.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
                 return
             }
             
-            //            RecentFlowersManager.shared.addFlower(flower)
-            let vc = PlantDetailsViewController.instantiate(with: flower, source: .identification)
-            self?.navigationController?.present(vc, animated: true, completion: nil)
+            RecentFlowersManager.shared.addFlower(flower)
+            
+            self?.hideWaitingAlert()
+            self?.navigationController?.dismiss(animated: true, completion: {
+                let vc = PlantDetailsViewController.instantiate(with: flower, source: .identification)
+                self?.navigationController?.present(vc, animated: true, completion: nil)
+                
+            })
+            
+            self?.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
             
             }, onFailure: { [weak self] (error, _) in
+                self?.hideWaitingAlert()
                 self?.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
         })
     }
@@ -124,6 +129,8 @@ extension HomePageTableViewController: UITableViewDelegate, UITableViewDataSourc
             let cell: RecentFlowersTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             
             cell.delegate = self
+            
+            cell.updateContent()
             cell.getHeight()
             
             return cell
@@ -148,6 +155,8 @@ extension HomePageTableViewController: UIImagePickerControllerDelegate, UINaviga
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true)
+        
+        showWaitingAlert()
         
         let selectedImage = info[.originalImage] as! UIImage
         image = selectedImage
