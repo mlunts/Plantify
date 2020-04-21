@@ -26,6 +26,10 @@ class HomePageTableViewController: BaseViewController {
         setStyle()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     // MARK: - private
     
     private func setupBehaviour() {
@@ -79,20 +83,21 @@ class HomePageTableViewController: BaseViewController {
     }
     
     private func classifyFlower() {
-//        ClassifierManager.shared.classifyFlower(for: image, completaion: { result in
-//            if let result = result {
-//                RecentFlowersManager.shared.addFlower(result)
-//
-//                let vc = PlantDetailsViewController.instantiate(with: result, source: .identification)
-//
-//                self.homePageTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
-//
-//                self.navigationController?.present(vc, animated: true, completion: nil)
-//
-//            } else {
-//                self.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
-//            }
-//        })
+        let imageData: Data = image.pngData()!
+        let imageStr = imageData.base64EncodedString()
+        
+        NetworkManager.shared.classifyFlower(from: imageStr, onSuccess: { [weak self] (flower, _) in
+            guard let flower = flower else {
+                return
+            }
+            
+            //            RecentFlowersManager.shared.addFlower(flower)
+            let vc = PlantDetailsViewController.instantiate(with: flower, source: .identification)
+            self?.navigationController?.present(vc, animated: true, completion: nil)
+            
+            }, onFailure: { [weak self] (error, _) in
+                self?.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
+        })
     }
 }
 
@@ -183,7 +188,7 @@ extension HomePageTableViewController: ExploreTableViewCellDelegate {
     
     func goToOrders(_ orders: [Order]) {
         let vc = OrdersViewController.instantiate(with: orders)
-               
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     

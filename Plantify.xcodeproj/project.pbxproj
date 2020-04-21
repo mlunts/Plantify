@@ -26,6 +26,8 @@
 		D99E8C76244F355D00EE1C3D /* TaxonomyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C74244F355D00EE1C3D /* TaxonomyTableViewCell.swift */; };
 		D99E8C77244F355D00EE1C3D /* TaxonomyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */; };
 		D99E8C7A244F4C3300EE1C3D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */; };
+		D99E8C7E244F508900EE1C3D /* ClassifyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C7D244F508900EE1C3D /* ClassifyRoute.swift */; };
+		D99E8C80244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C7F244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift */; };
 		D9A00C9923EDA6F500ED153E /* RecentFlowersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A00C9823EDA6F500ED153E /* RecentFlowersManager.swift */; };
 		D9A00C9D23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A00C9B23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift */; };
 		D9A00C9E23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A00C9C23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib */; };
@@ -105,6 +107,8 @@
 		D99E8C74244F355D00EE1C3D /* TaxonomyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonomyTableViewCell.swift; sourceTree = "<group>"; };
 		D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonomyTableViewCell.xib; sourceTree = "<group>"; };
 		D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D99E8C7D244F508900EE1C3D /* ClassifyRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyRoute.swift; sourceTree = "<group>"; };
+		D99E8C7F244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+ClassifyRoute.swift"; sourceTree = "<group>"; };
 		D9A00C9823EDA6F500ED153E /* RecentFlowersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFlowersManager.swift; sourceTree = "<group>"; };
 		D9A00C9B23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFlowersTableViewCell.swift; sourceTree = "<group>"; };
 		D9A00C9C23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentFlowersTableViewCell.xib; sourceTree = "<group>"; };
@@ -279,6 +283,13 @@
 				D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */,
 			);
 			path = TaxonomyCell;
+		D99E8C7B244F506200EE1C3D /* Classify */ = {
+			isa = PBXGroup;
+			children = (
+				D99E8C7D244F508900EE1C3D /* ClassifyRoute.swift */,
+				D99E8C7F244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift */,
+			);
+			path = Classify;
 			sourceTree = "<group>";
 		};
 		D9A00C9A23EE0D5000ED153E /* RecentFlowers */ = {
@@ -381,6 +392,7 @@
 		D9BDA723244B24B10088C80A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D99E8C7B244F506200EE1C3D /* Classify */,
 				D9CC526A244B379700846994 /* Plugins */,
 				D9CC5278244CCB8000846994 /* OrdersList */,
 				D9CC5273244CCA2B00846994 /* Flower */,
@@ -695,6 +707,7 @@
 				D9CC527C244CCD3900846994 /* UIImage+Extensions.swift in Sources */,
 				D90B233B23F0443E0098EBB3 /* UIImageView+Extensions.swift in Sources */,
 				D9A00C9923EDA6F500ED153E /* RecentFlowersManager.swift in Sources */,
+				D99E8C80244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift in Sources */,
 				D9E1DAED23EC9B7400368EE9 /* Order.swift in Sources */,
 				D9E1DAEA23EC98D300368EE9 /* ExploreOrdersCollectionViewCell.swift in Sources */,
 				D9A633CB23F980B300801AE7 /* PlantDescriptionTableViewCell.swift in Sources */,
@@ -722,6 +735,7 @@
 				D99E8C7A244F4C3300EE1C3D /* String+Extensions.swift in Sources */,
 				D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */,
 				D9A633C723F957A300801AE7 /* PlantTitleTableViewCell.swift in Sources */,
+				D99E8C7E244F508900EE1C3D /* ClassifyRoute.swift in Sources */,
 				D904275F244E4BCD001CD016 /* PlantsTableViewController.swift in Sources */,
 				D904274F244E2A42001CD016 /* OrdersViewController.swift in Sources */,
 				D9A633B723F80FD900801AE7 /* PlantDetailsViewController.swift in Sources */,
