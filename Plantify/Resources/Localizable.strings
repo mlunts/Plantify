@@ -23,9 +23,15 @@
 // PlantInfo
 "plantInfoPoisoned" = "Poisoned";
 "plantInfoNotPoisoned" = "Not poisoned";
+"plantInfoTaxonomyHeaderOrder" = "Order:";
+"plantInfoTaxonomyHeaderFamily" = "Family:";
+"plantInfoTaxonomyHeaderTribe" = "Tribe:";
+"plantInfoTaxonomyHeaderBotanicalName" = "Botanical name:";
+"plantInfoTaxonomyHeaderUses" = "General uses:";
 
 // Orders
 "ordersPageHeader" = "Orders";
 
 // Plants
 "plantsPageNotFound" = "No flowers have been found";
+

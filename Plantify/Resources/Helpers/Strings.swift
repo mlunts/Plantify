@@ -45,6 +45,16 @@ internal enum L10n {
   internal static let plantInfoNotPoisoned = L10n.tr("Localizable", "plantInfoNotPoisoned")
   /// Poisoned
   internal static let plantInfoPoisoned = L10n.tr("Localizable", "plantInfoPoisoned")
+  /// Botanical name:
+  internal static let plantInfoTaxonomyHeaderBotanicalName = L10n.tr("Localizable", "plantInfoTaxonomyHeaderBotanicalName")
+  /// Family:
+  internal static let plantInfoTaxonomyHeaderFamily = L10n.tr("Localizable", "plantInfoTaxonomyHeaderFamily")
+  /// Order:
+  internal static let plantInfoTaxonomyHeaderOrder = L10n.tr("Localizable", "plantInfoTaxonomyHeaderOrder")
+  /// Tribe:
+  internal static let plantInfoTaxonomyHeaderTribe = L10n.tr("Localizable", "plantInfoTaxonomyHeaderTribe")
+  /// General uses:
+  internal static let plantInfoTaxonomyHeaderUses = L10n.tr("Localizable", "plantInfoTaxonomyHeaderUses")
   /// No flowers have been found
   internal static let plantsPageNotFound = L10n.tr("Localizable", "plantsPageNotFound")
   /// Take Photo

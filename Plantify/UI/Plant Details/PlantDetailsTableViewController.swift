@@ -11,7 +11,7 @@ import UIKit
 class PlantDetailsTableViewController: UIViewController {
     
     enum PlantDetails: CaseIterable {
-        case image, title, description, basicInfo
+        case image, title, description, basicInfo, taxonomy
     }
     
     // MARK: - properties
@@ -47,6 +47,7 @@ class PlantDetailsTableViewController: UIViewController {
         setNib("PlantTitleTableViewCell")
         setNib("PlantDescriptionTableViewCell")
         setNib("PlantBasicInformationTableViewCell")
+        setNib("PlantTaxonomyTableViewCell")
     }
     
     private func setNib(_ name: String) {
@@ -85,6 +86,10 @@ extension PlantDetailsTableViewController: UITableViewDataSource, UITableViewDel
 
             cell.setFlower(flower)
             
+            return cell
+        case .taxonomy:
+            let cell: PlantTaxonomyTableViewCell  = tableView.dequeueReusableCell(for: indexPath)
+            cell.setContent(flower: flower)
             return cell
         }
     }
