@@ -23,6 +23,9 @@
 		D904275F244E4BCD001CD016 /* PlantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D904275E244E4BCD001CD016 /* PlantsTableViewController.swift */; };
 		D9042761244E4DD7001CD016 /* OrdersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D904275C244E4BAF001CD016 /* OrdersCollectionViewController.swift */; };
 		D90B233B23F0443E0098EBB3 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B233A23F0443E0098EBB3 /* UIImageView+Extensions.swift */; };
+		D99E8C76244F355D00EE1C3D /* TaxonomyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C74244F355D00EE1C3D /* TaxonomyTableViewCell.swift */; };
+		D99E8C77244F355D00EE1C3D /* TaxonomyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */; };
+		D99E8C7A244F4C3300EE1C3D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */; };
 		D9A00C9923EDA6F500ED153E /* RecentFlowersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A00C9823EDA6F500ED153E /* RecentFlowersManager.swift */; };
 		D9A00C9D23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A00C9B23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift */; };
 		D9A00C9E23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A00C9C23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib */; };
@@ -99,6 +102,9 @@
 		D904275C244E4BAF001CD016 /* OrdersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersCollectionViewController.swift; sourceTree = "<group>"; };
 		D904275E244E4BCD001CD016 /* PlantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTableViewController.swift; sourceTree = "<group>"; };
 		D90B233A23F0443E0098EBB3 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		D99E8C74244F355D00EE1C3D /* TaxonomyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonomyTableViewCell.swift; sourceTree = "<group>"; };
+		D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonomyTableViewCell.xib; sourceTree = "<group>"; };
+		D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		D9A00C9823EDA6F500ED153E /* RecentFlowersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFlowersManager.swift; sourceTree = "<group>"; };
 		D9A00C9B23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFlowersTableViewCell.swift; sourceTree = "<group>"; };
 		D9A00C9C23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentFlowersTableViewCell.xib; sourceTree = "<group>"; };
@@ -266,6 +272,15 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		D99E8C78244F356200EE1C3D /* TaxonomyCell */ = {
+			isa = PBXGroup;
+			children = (
+				D99E8C74244F355D00EE1C3D /* TaxonomyTableViewCell.swift */,
+				D99E8C75244F355D00EE1C3D /* TaxonomyTableViewCell.xib */,
+			);
+			path = TaxonomyCell;
+			sourceTree = "<group>";
+		};
 		D9A00C9A23EE0D5000ED153E /* RecentFlowers */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +371,7 @@
 		D9A633DA23F9BD0300801AE7 /* Taxonomy */ = {
 			isa = PBXGroup;
 			children = (
+				D99E8C78244F356200EE1C3D /* TaxonomyCell */,
 				D9A633DB23F9BD4F00801AE7 /* PlantTaxonomyTableViewCell.swift */,
 				D9A633DC23F9BD4F00801AE7 /* PlantTaxonomyTableViewCell.xib */,
 			);
@@ -470,6 +486,7 @@
 				D9A633BC23F816E600801AE7 /* UIViewController+Extensions.swift */,
 				D90B233A23F0443E0098EBB3 /* UIImageView+Extensions.swift */,
 				D9CC527B244CCD3900846994 /* UIImage+Extensions.swift */,
+				D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +613,7 @@
 				D9A633C823F957A300801AE7 /* PlantTitleTableViewCell.xib in Resources */,
 				D9D6DD3223E997B7008C8DC0 /* Localizable.strings in Resources */,
 				D9A633B523F80FBB00801AE7 /* PlantDetails.storyboard in Resources */,
+				D99E8C77244F355D00EE1C3D /* TaxonomyTableViewCell.xib in Resources */,
 				9C26F4BE229318DF00BDEA59 /* generalUses.json in Resources */,
 				D9E1DAEB23EC98D300368EE9 /* ExploreOrdersCollectionViewCell.xib in Resources */,
 				D9042758244E4B03001CD016 /* Plants.storyboard in Resources */,
@@ -691,6 +709,7 @@
 				D9CC527A244CCB9400846994 /* OrdersListRoute.swift in Sources */,
 				D9AAC14623F057D900B89351 /* ColorRandomiser.swift in Sources */,
 				9C26F4C622931AD300BDEA59 /* PlantsClassifier.mlmodel in Sources */,
+				D99E8C76244F355D00EE1C3D /* TaxonomyTableViewCell.swift in Sources */,
 				D9D6DD5623E9C5B5008C8DC0 /* HomePageTableViewController.swift in Sources */,
 				D9E1DAEF23EC9E4F00368EE9 /* UICollectionView+Extensions.swift in Sources */,
 				D9CC5277244CCB2400846994 /* NetworkManager+Flower.swift in Sources */,
@@ -700,6 +719,7 @@
 				D9C5AE6623EAD4C8005358DE /* Strings.swift in Sources */,
 				D9E1DAD323EADBEA00368EE9 /* UITableView+Extensions.swift in Sources */,
 				D9A00CA123EE147300ED153E /* FlowerTableViewCell.swift in Sources */,
+				D99E8C7A244F4C3300EE1C3D /* String+Extensions.swift in Sources */,
 				D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */,
 				D9A633C723F957A300801AE7 /* PlantTitleTableViewCell.swift in Sources */,
 				D904275F244E4BCD001CD016 /* PlantsTableViewController.swift in Sources */,

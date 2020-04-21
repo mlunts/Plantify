@@ -16,7 +16,7 @@ class Flower: Codable {
     var botanicalName: String?
     var information: String
     var seasons: String
-    var toxic: String?
+    var toxicities: String?
     var uses: String
     var tribeName: String
     var familyName: String
@@ -31,7 +31,7 @@ class Flower: Codable {
         self.name = ""
         self.botanicalName = ""
         self.information = ""
-        self.toxic = ""
+        self.toxicities = ""
         self.uses = ""
         self.tribeName = ""
         self.familyName = ""
