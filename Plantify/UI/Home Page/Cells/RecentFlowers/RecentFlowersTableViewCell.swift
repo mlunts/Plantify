@@ -58,7 +58,7 @@ class RecentFlowersTableViewCell: UITableViewCell {
     private func setBehaviour() {
         flowersIsEmpty(flowers == nil)
         
-        setNib("RecentFlowerTableViewCell")
+        setNib("FlowerTableViewCell")
         
         recentFlowersTableView.dataSource = self
         recentFlowersTableView.delegate = self
@@ -95,7 +95,7 @@ extension RecentFlowersTableViewCell: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: RecentFlowerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell: FlowerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         
         cell.setContent(with: flowers![indexPath.row])
         

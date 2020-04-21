@@ -74,6 +74,8 @@ extension OrdersCollectionViewController: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        let vc = PlantsViewController.instantiate(with: orders[indexPath.row])
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

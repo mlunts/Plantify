@@ -45,6 +45,8 @@ internal enum L10n {
   internal static let plantInfoNotPoisoned = L10n.tr("Localizable", "plantInfoNotPoisoned")
   /// Poisoned
   internal static let plantInfoPoisoned = L10n.tr("Localizable", "plantInfoPoisoned")
+  /// No flowers have been found
+  internal static let plantsPageNotFound = L10n.tr("Localizable", "plantsPageNotFound")
   /// Take Photo
   internal static let takePhoto = L10n.tr("Localizable", "takePhoto")
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentFlowerTableViewCell: UITableViewCell {
+class FlowerTableViewCell: UITableViewCell {
     
     // MARK: - properties
     
@@ -35,7 +35,7 @@ class RecentFlowerTableViewCell: UITableViewCell {
     func setContent(with flower: Flower) {
         nameLabel.text = flower.name
         subTitleLabel.text = flower.information
-        flowerImageView.setCustomImage(flower.image)
+        flowerImageView.setCustomImage(flower.imageFilename)
     }
     
     // MARK: - private

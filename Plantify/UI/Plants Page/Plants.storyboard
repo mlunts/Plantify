@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Plants View Controller-->
+        <scene sceneID="ZA2-NI-g3L">
+            <objects>
+                <viewController storyboardIdentifier="PlantsViewController" id="Ckc-Lo-hZW" customClass="PlantsViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zKy-Qf-JCM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOt-BE-0hf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mOt-BE-0hf" firstAttribute="top" secondItem="nss-tV-vuv" secondAttribute="top" id="GeA-Rn-PcI"/>
+                            <constraint firstItem="nss-tV-vuv" firstAttribute="bottom" secondItem="mOt-BE-0hf" secondAttribute="bottom" id="a0F-SR-RY5"/>
+                            <constraint firstItem="mOt-BE-0hf" firstAttribute="leading" secondItem="nss-tV-vuv" secondAttribute="leading" id="b7e-a5-RtG"/>
+                            <constraint firstItem="nss-tV-vuv" firstAttribute="trailing" secondItem="mOt-BE-0hf" secondAttribute="trailing" id="dLW-Q3-CCt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nss-tV-vuv"/>
+                    </view>
+                    <connections>
+                        <outlet property="plantsCollectionViewContainer" destination="mOt-BE-0hf" id="grT-Sp-1Z3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfj-r4-KJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="106"/>
+        </scene>
+        <!--Plants Table View Controller-->
+        <scene sceneID="Pwb-qc-mM8">
+            <objects>
+                <viewController storyboardIdentifier="PlantsTableViewController" id="guW-d9-jQy" customClass="PlantsTableViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XV5-Sx-NGu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dM5-Fj-rod">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="guW-d9-jQy" id="8f8-Rv-6dN"/>
+                                    <outlet property="delegate" destination="guW-d9-jQy" id="v2T-i1-RPD"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-QT-8HG">
+                                <rect key="frame" x="0.0" y="439.5" width="414" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dM5-Fj-rod" secondAttribute="trailing" id="J2e-5E-TxG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dM5-Fj-rod" secondAttribute="bottom" id="ND3-Xz-Ps7"/>
+                            <constraint firstItem="Zcf-QT-8HG" firstAttribute="centerY" secondItem="Um9-Pi-oFm" secondAttribute="centerY" id="NFs-aL-rSf"/>
+                            <constraint firstItem="Um9-Pi-oFm" firstAttribute="trailing" secondItem="Zcf-QT-8HG" secondAttribute="trailing" id="doM-Dr-7Jb"/>
+                            <constraint firstItem="Zcf-QT-8HG" firstAttribute="leading" secondItem="Um9-Pi-oFm" secondAttribute="leading" id="fdI-rH-9z4"/>
+                            <constraint firstItem="dM5-Fj-rod" firstAttribute="top" secondItem="XV5-Sx-NGu" secondAttribute="topMargin" id="kqG-QL-9yu"/>
+                            <constraint firstItem="dM5-Fj-rod" firstAttribute="leading" secondItem="XV5-Sx-NGu" secondAttribute="leadingMargin" id="nFR-Tg-Smu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Um9-Pi-oFm"/>
+                    </view>
+                    <connections>
+                        <outlet property="noPlantsLabel" destination="Zcf-QT-8HG" id="fon-qd-Gph"/>
+                        <outlet property="plantsTableView" destination="dM5-Fj-rod" id="MY4-4k-n1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjb-vp-9NG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="125"/>
+        </scene>
+    </scenes>
+</document>
