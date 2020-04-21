@@ -1,33 +1,35 @@
 //
-//  OrdersListRoute.swift
+//  ClassifyRoute.swift
 //  Plantify
 //
-//  Created by Marina Lunts on 19.04.2020.
+//  Created by Marina Lunts on 21.04.2020.
 //  Copyright © 2020 earine. All rights reserved.
 //
 
 import Moya
 
-enum OrdersListRoute {
-    case listOfOrders
+enum ClassifyRoute {
+    case classifyFlower(imageData: String)
 }
 
-extension OrdersListRoute: TargetType {
+extension ClassifyRoute: TargetType {
     
     var baseURL: URL {
-        return URL(string: "\(NetworkManager.baseServerPath)/api")!
+//            return URL(string: "\(NetworkManager.baseServerPath)/api/orders")!
+        return URL(string: "https://api.npoint.io/fcf4cb123a147e6c5426")!
     }
     
     var path: String {
         switch self {
-        case .listOfOrders:
-            return "/orders"
+        case .classifyFlower:
+//            return "/classify"
+            return ""
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .listOfOrders:
+        case .classifyFlower:
             return .get
         }
     }
@@ -38,7 +40,9 @@ extension OrdersListRoute: TargetType {
     
     var task: Task {
         switch self {
-        case .listOfOrders:
+//            case .classifyFlower(let data):
+            //            return .requestParameters(parameters: ["imageFile": data], encoding: JSONEncoding.default)
+        case .classifyFlower:
             return .requestPlain
         }
     }
@@ -52,8 +56,9 @@ extension OrdersListRoute: TargetType {
     }
 }
 
-extension OrdersListRoute: CachePolicyGettable {
+extension ClassifyRoute: CachePolicyGettable {
     var cachePolicy: URLRequest.CachePolicy {
         return .useProtocolCachePolicy
     }
 }
+

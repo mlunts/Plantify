@@ -9,5 +9,5 @@
 import Foundation
 
 struct Environment {
-    static var baseServerPath: String = ""
+    static var baseServerPath: String = "https://flowerfy2020.azurewebsites.net"
 }

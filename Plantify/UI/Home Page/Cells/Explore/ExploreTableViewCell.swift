@@ -70,7 +70,6 @@ class ExploreTableViewCell: UITableViewCell {
             
             }, onFailure: { [weak self] (error, _) in
                 self?.setNoInternetBehaviour(true)
-                self?.setNoInternetBehaviour(false)
         })
     }
     
