@@ -176,7 +176,9 @@ extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
 
 extension HomePageTableViewController: ExploreTableViewCellDelegate {
     func goToOrder(_ order: Order) {
-        //
+        let vc = PlantsViewController.instantiate(with: order)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func goToOrders(_ orders: [Order]) {

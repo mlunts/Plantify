@@ -26,3 +26,6 @@
 
 // Orders
 "ordersPageHeader" = "Orders";
+
+// Plants
+"plantsPageNotFound" = "No flowers have been found";
