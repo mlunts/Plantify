@@ -15,22 +15,20 @@ enum ClassifyRoute {
 extension ClassifyRoute: TargetType {
     
     var baseURL: URL {
-//            return URL(string: "\(NetworkManager.baseServerPath)/api/orders")!
-        return URL(string: "https://api.npoint.io/fcf4cb123a147e6c5426")!
+        return URL(string: "\(NetworkManager.baseServerPath)/api")!
     }
     
     var path: String {
         switch self {
         case .classifyFlower:
-//            return "/classify"
-            return ""
+            return "/classify"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .classifyFlower:
-            return .get
+            return .post
         }
     }
     
@@ -40,10 +38,8 @@ extension ClassifyRoute: TargetType {
     
     var task: Task {
         switch self {
-//            case .classifyFlower(let data):
-            //            return .requestParameters(parameters: ["imageFile": data], encoding: JSONEncoding.default)
-        case .classifyFlower:
-            return .requestPlain
+        case .classifyFlower(let data):
+            return .requestParameters(parameters: ["imageFile": data], encoding: JSONEncoding.default)
         }
     }
     

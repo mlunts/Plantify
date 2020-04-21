@@ -32,15 +32,10 @@ class RecentFlowersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        setContent()
-        setBehaviour()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     // MARK: - public
@@ -53,16 +48,21 @@ class RecentFlowersTableViewCell: UITableViewCell {
         }
     }
     
+    func updateContent() {
+        setContent()
+        
+        setBehaviour()
+    }
+    
     // MARK: - private
     
     private func setBehaviour() {
-        flowersIsEmpty(flowers == nil)
+        flowersIsEmpty(flowers?.isEmpty ?? true)
         
         setNib("FlowerTableViewCell")
         
         recentFlowersTableView.dataSource = self
         recentFlowersTableView.delegate = self
-        
     }
     
     private func setContent() {

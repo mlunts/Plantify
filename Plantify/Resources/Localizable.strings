@@ -3,6 +3,7 @@
 "noTitleText" = "No title";
 "emptyString" = "";
 "cancelText" = "Cancel";
+"waitingAlert" = "Please,wait...";
 
 // Error
 "errorOops" = "Oops!";

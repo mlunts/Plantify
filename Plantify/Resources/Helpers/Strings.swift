@@ -59,6 +59,8 @@ internal enum L10n {
   internal static let plantsPageNotFound = L10n.tr("Localizable", "plantsPageNotFound")
   /// Take Photo
   internal static let takePhoto = L10n.tr("Localizable", "takePhoto")
+  /// Please,wait...
+  internal static let waitingAlert = L10n.tr("Localizable", "waitingAlert")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

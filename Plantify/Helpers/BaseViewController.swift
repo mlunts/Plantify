@@ -18,6 +18,7 @@ class BaseViewController: UIViewController {
     // MARK: - properties
     
     private let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+    private let waitingAlert = UIAlertController(title: nil, message: L10n.waitingAlert, preferredStyle: .alert)
     
     lazy private var activityIndicator = UIActivityIndicatorView(style: .gray).then {
         if $0.superview == nil {
@@ -44,6 +45,18 @@ class BaseViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func showWaitingAlert() {
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating()
+        
+        waitingAlert.view.addSubview(loadingIndicator)
+        present(waitingAlert, animated: true, completion: nil)
+    }
+    
+    func hideWaitingAlert() {
+        dismiss(animated: false, completion: nil)
+    }
 }
 
 extension BaseViewController: ActivityIndicatorProtocol {
