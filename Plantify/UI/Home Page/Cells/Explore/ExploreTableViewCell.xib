@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXM-Ct-oOs">
-                        <rect key="frame" x="292" y="14.5" width="48" height="30"/>
+                        <rect key="frame" x="282" y="14.5" width="48" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <state key="normal" title="Button">
                             <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -62,7 +62,7 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="bXM-Ct-oOs" secondAttribute="trailing" constant="10" id="1fa-LO-yxL"/>
+                    <constraint firstAttribute="trailing" secondItem="bXM-Ct-oOs" secondAttribute="trailing" constant="20" id="1fa-LO-yxL"/>
                     <constraint firstAttribute="trailing" secondItem="sss-s1-kqj" secondAttribute="trailing" id="97p-yT-BSi"/>
                     <constraint firstItem="sss-s1-kqj" firstAttribute="top" secondItem="gf8-eT-I9C" secondAttribute="bottom" constant="20" id="BYr-I3-6ur"/>
                     <constraint firstItem="gf8-eT-I9C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Gbf-x2-Bbj"/>

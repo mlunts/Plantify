@@ -45,7 +45,7 @@ class PlantTaxonomyTableViewCell: UITableViewCell {
     private func setupTableHeight() {
         let font = UIFont.systemFont(ofSize: 16)
         
-        taxonomyTableViewHeightContraint.constant = 3*45 + flower.uses.height(withConstrainedWidth: (taxonomyTableView.bounds.width - 100), font: font)
+        taxonomyTableViewHeightContraint.constant = 3*45 + flower.uses.height(withConstrainedWidth: (taxonomyTableView.bounds.width - 120), font: font)
     }
     
     private func setNib(_ name: String) {
