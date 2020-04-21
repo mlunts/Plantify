@@ -13,31 +13,31 @@ class Flower: Codable {
     
     var id: Int
     var name: String
-    var botanical_name: String?
+    var botanicalName: String?
     var information: String
-    var season: String
+    var seasons: String
     var toxic: String?
     var uses: String
-    var tribe: String
-    var family: String
-    var order: String
+    var tribeName: String
+    var familyName: String
+    var orderName: String
     var type: String
     //    public var generalUse = [String]()
     //    public var problemSolvers = [String]()
-    var image: String
+    var imageFilename: String
     
     init() {
         self.id = 0
         self.name = ""
-        self.botanical_name = ""
+        self.botanicalName = ""
         self.information = ""
         self.toxic = ""
         self.uses = ""
-        self.tribe = ""
-        self.family = ""
-        self.order = ""
-        self.season = ""
-        self.image = ""
+        self.tribeName = ""
+        self.familyName = ""
+        self.orderName = ""
+        self.seasons = ""
+        self.imageFilename = ""
         self.type = ""
     }
     
@@ -46,9 +46,9 @@ class Flower: Codable {
     
     func getTaxonomy() -> [Int : (String, String)] {
         var taxonomy = [Int : (String, String)]()
-        taxonomy[0] = (self.order, "Order:")
-        taxonomy[1] = (self.family, "Family:")
-        taxonomy[2] = (self.tribe, "Tribe")
+        taxonomy[0] = (self.orderName, "Order:")
+        taxonomy[1] = (self.familyName, "Family:")
+        taxonomy[2] = (self.tribeName, "Tribe")
         return taxonomy
     }
     

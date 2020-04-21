@@ -72,7 +72,7 @@ extension PlantBasicInformationTableViewCell: UICollectionViewDelegate, UICollec
         case .type:
             cell.setContent(text: flower.type, picture: cellType.systemPicture)
         case .flowerTime:
-            cell.setContent(text: flower.season, picture: cellType.systemPicture)
+            cell.setContent(text: flower.seasons, picture: cellType.systemPicture)
         case .poisoned:
             cell.setContent(text: flower.poisonedString(), picture: cellType.systemPicture)
         }

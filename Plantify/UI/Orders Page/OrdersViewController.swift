@@ -47,5 +47,4 @@ class OrdersViewController: BaseViewController {
         addChildVC(ordersCollectionViewController, to: ordersCollectionViewContainer)
     }
     
-    
 }
