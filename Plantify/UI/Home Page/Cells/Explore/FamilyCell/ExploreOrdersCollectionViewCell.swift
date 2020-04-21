@@ -28,7 +28,7 @@ class ExploreOrdersCollectionViewCell: UICollectionViewCell {
     
     func setContent(with order: Order) {
         familyNameLabel.text = order.name
-        flowerImageView.image = UIImage().getImage(from: order.image)
+        flowerImageView.image = UIImage().getImage(from: order.imageFilename)
         
         backgroundColor = ColorRandomiser().getColor()
     }

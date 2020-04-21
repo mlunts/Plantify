@@ -33,7 +33,7 @@ class PlantImageTableViewCell: UITableViewCell {
     // MARK: - private
     
     func updateView() {
-        flowerImageView.setCustomImage(flower.image)
+        flowerImageView.setCustomImage(flower.imageFilename)
         
         backgroundColor = ColorRandomiser().getColor()
     }
