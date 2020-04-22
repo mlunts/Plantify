@@ -1,0 +1,38 @@
+"alertTitleOK" = "OK";
+"alertTitleRetry" = "Retry";
+"noTitleText" = "No title";
+"emptyString" = "";
+"cancelText" = "Cancel";
+"waitingAlert" = "Please,wait...";
+
+// Error
+"errorOops" = "Oops!";
+"errorNoServerAnswer" = "No server response received";
+"errorNoClassifiedFlower" = "Cannot identify the flower. Try again with another image.";
+
+// Homepage
+"homePageHeader" = "What flower do you see?";
+"homePageExploreHeader" = "Explore flowers";
+"homePageViewAll" = "View All"; 
+"homePageRecentFlowers" = "Recent flowers";
+"homePageNoRecentFlowers" = "You have no recent identified flowers."; 
+
+// Photo picker
+"takePhoto" = "Take Photo";
+"chooseFromLibrary" = "Choose From Library";
+
+// PlantInfo
+"plantInfoPoisoned" = "Poisoned";
+"plantInfoNotPoisoned" = "Not poisoned";
+"plantInfoTaxonomyHeaderOrder" = "Order:";
+"plantInfoTaxonomyHeaderFamily" = "Family:";
+"plantInfoTaxonomyHeaderTribe" = "Tribe:";
+"plantInfoTaxonomyHeaderBotanicalName" = "Botanical name:";
+"plantInfoTaxonomyHeaderUses" = "General uses:";
+
+// Orders
+"ordersPageHeader" = "Orders";
+
+// Plants
+"plantsPageNotFound" = "No flowers have been found";
+

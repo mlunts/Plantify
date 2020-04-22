@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Plant Details View Controller-->
+        <scene sceneID="DP2-sW-I3v">
+            <objects>
+                <viewController storyboardIdentifier="PlantDetailsViewController" id="pHt-g2-AVE" customClass="PlantDetailsViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VB7-9A-4rf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ak-TD-Uom">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uyJ-nP-Rak" firstAttribute="bottom" secondItem="6ak-TD-Uom" secondAttribute="bottom" id="TRM-73-dE6"/>
+                            <constraint firstItem="uyJ-nP-Rak" firstAttribute="trailing" secondItem="6ak-TD-Uom" secondAttribute="trailing" id="gyQ-Qc-c3f"/>
+                            <constraint firstItem="6ak-TD-Uom" firstAttribute="top" secondItem="uyJ-nP-Rak" secondAttribute="top" id="weq-7H-TNO"/>
+                            <constraint firstItem="6ak-TD-Uom" firstAttribute="leading" secondItem="uyJ-nP-Rak" secondAttribute="leading" id="xHV-7p-MXn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uyJ-nP-Rak"/>
+                    </view>
+                    <connections>
+                        <outlet property="plantDetailsTableViewContainer" destination="6ak-TD-Uom" id="eds-Im-0LL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUE-bn-fM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="67"/>
+        </scene>
+        <!--Plant Details Table View Controller-->
+        <scene sceneID="ZHx-7L-AWK">
+            <objects>
+                <viewController storyboardIdentifier="PlantDetailsTableViewController" id="e1m-cB-8hQ" customClass="PlantDetailsTableViewController" customModule="Plantify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KT3-0h-shl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OxZ-lX-vkO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e1m-cB-8hQ" id="sLj-vY-ZPL"/>
+                                    <outlet property="delegate" destination="e1m-cB-8hQ" id="z7R-p4-blv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OxZ-lX-vkO" firstAttribute="top" secondItem="KT3-0h-shl" secondAttribute="topMargin" id="LcX-Gv-ygs"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="OxZ-lX-vkO" secondAttribute="bottom" id="M0Z-RA-oWd"/>
+                            <constraint firstItem="OxZ-lX-vkO" firstAttribute="leading" secondItem="Lso-4L-X2Y" secondAttribute="leading" id="RTy-xy-WFq"/>
+                            <constraint firstAttribute="trailing" secondItem="OxZ-lX-vkO" secondAttribute="trailing" id="qf4-Pn-Kh3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lso-4L-X2Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTableView" destination="OxZ-lX-vkO" id="TqK-EX-97h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmn-EP-mbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="30"/>
+        </scene>
+    </scenes>
+</document>
