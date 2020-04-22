@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0042CB66097BC30CB9915A0F /* Pods_Plantify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */; };
+		2A635D62A9D299E7411CA872 /* Pods_PlantifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272AFECB8D68CFFA6C316AEE /* Pods_PlantifyTests.framework */; };
 		9C26F4A8229316DC00BDEA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */; };
 		9C26F4AF229316DD00BDEA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4AE229316DD00BDEA59 /* Assets.xcassets */; };
 		9C26F4B2229316DD00BDEA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,8 @@
 		D9D6DD5623E9C5B5008C8DC0 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6DD5523E9C5B5008C8DC0 /* HomePageTableViewController.swift */; };
 		D9D6DD5C23E9D098008C8DC0 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6DD5A23E9D098008C8DC0 /* HeaderTableViewCell.swift */; };
 		D9D6DD5D23E9D098008C8DC0 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D6DD5B23E9D098008C8DC0 /* HeaderTableViewCell.xib */; };
+		D9DD0310244FAF7400BE2582 /* PlantifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD030F244FAF7400BE2582 /* PlantifyTests.swift */; };
+		D9DD0318244FB0D800BE2582 /* OrdersTableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD0317244FB0D800BE2582 /* OrdersTableViewTest.swift */; };
 		D9E1DAD323EADBEA00368EE9 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD223EADBEA00368EE9 /* UITableView+Extensions.swift */; };
 		D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */; };
 		D9E1DAD823EAE25200368EE9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */; };
@@ -76,15 +79,27 @@
 		D9E1DAEF23EC9E4F00368EE9 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D9DD0312244FAF7400BE2582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C26F49C229316DC00BDEA59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C26F4A3229316DC00BDEA59;
+			remoteInfo = Plantify;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		12A1DE73DD628AD14E0E59CC /* Pods-Plantify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plantify/Pods-Plantify.debug.xcconfig"; sourceTree = "<group>"; };
 		143CB9CC0AD6801E8A37333E /* Pods-Plantify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plantify/Pods-Plantify.release.xcconfig"; sourceTree = "<group>"; };
+		272AFECB8D68CFFA6C316AEE /* Pods_PlantifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C26F4A4229316DC00BDEA59 /* Plantify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C26F4AE229316DD00BDEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C26F4B1229316DD00BDEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C26F4B3229316DD00BDEA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C26F4C322931A9B00BDEA59 /* Flower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		A7C99ADBF019E2DEE539F538 /* Pods-PlantifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantifyTests/Pods-PlantifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plantify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D904274E244E2A42001CD016 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		D9042750244E2A4E001CD016 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
@@ -138,6 +153,10 @@
 		D9D6DD5523E9C5B5008C8DC0 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
 		D9D6DD5A23E9D098008C8DC0 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		D9D6DD5B23E9D098008C8DC0 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		D9DD030D244FAF7400BE2582 /* PlantifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9DD030F244FAF7400BE2582 /* PlantifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantifyTests.swift; sourceTree = "<group>"; };
+		D9DD0311244FAF7400BE2582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9DD0317244FB0D800BE2582 /* OrdersTableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewTest.swift; sourceTree = "<group>"; };
 		D9E1DAD223EADBEA00368EE9 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -149,6 +168,7 @@
 		D9E1DAE923EC98D300368EE9 /* ExploreOrdersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreOrdersCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9E1DAEC23EC9B7400368EE9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		E032672F8D705E710F8C613B /* Pods-PlantifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantifyTests/Pods-PlantifyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +180,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9DD030A244FAF7400BE2582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A635D62A9D299E7411CA872 /* Pods_PlantifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -168,6 +196,8 @@
 			children = (
 				12A1DE73DD628AD14E0E59CC /* Pods-Plantify.debug.xcconfig */,
 				143CB9CC0AD6801E8A37333E /* Pods-Plantify.release.xcconfig */,
+				E032672F8D705E710F8C613B /* Pods-PlantifyTests.debug.xcconfig */,
+				A7C99ADBF019E2DEE539F538 /* Pods-PlantifyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -176,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D27C35F1C85B989A6A417B98 /* Pods_Plantify.framework */,
+				272AFECB8D68CFFA6C316AEE /* Pods_PlantifyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9C26F4A6229316DC00BDEA59 /* Plantify */,
+				D9DD030E244FAF7400BE2582 /* PlantifyTests */,
 				9C26F4A5229316DC00BDEA59 /* Products */,
 				5B8A329C96FA458508632740 /* Pods */,
 				6C2D57DB1E6BDD3A415636BC /* Frameworks */,
@@ -195,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				9C26F4A4229316DC00BDEA59 /* Plantify.app */,
+				D9DD030D244FAF7400BE2582 /* PlantifyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,13 +236,13 @@
 			isa = PBXGroup;
 			children = (
 				D9BDA723244B24B10088C80A /* API */,
-				9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */,
 				9C26F4CF22934A0400BDEA59 /* UI */,
 				9C26F4C722931AE100BDEA59 /* Models */,
 				D9E1DAD123EADBCD00368EE9 /* Extensions */,
 				D9E1DAD423EADCEB00368EE9 /* Helpers */,
 				D9E1DADB23EB40F500368EE9 /* Managers */,
 				D9D6DD4A23E99C31008C8DC0 /* Resources */,
+				9C26F4A7229316DC00BDEA59 /* AppDelegate.swift */,
 				9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */,
 				9C26F4B3229316DD00BDEA59 /* Info.plist */,
 			);
@@ -475,6 +508,16 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		D9DD030E244FAF7400BE2582 /* PlantifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9DD030F244FAF7400BE2582 /* PlantifyTests.swift */,
+				D9DD0311244FAF7400BE2582 /* Info.plist */,
+				D9DD0317244FB0D800BE2582 /* OrdersTableViewTest.swift */,
+			);
+			path = PlantifyTests;
+			sourceTree = "<group>";
+		};
 		D9E1DAD123EADBCD00368EE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,18 +603,42 @@
 			productReference = 9C26F4A4229316DC00BDEA59 /* Plantify.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D9DD030C244FAF7400BE2582 /* PlantifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9DD0316244FAF7400BE2582 /* Build configuration list for PBXNativeTarget "PlantifyTests" */;
+			buildPhases = (
+				C6498130821E82B28AF86388 /* [CP] Check Pods Manifest.lock */,
+				D9DD0309244FAF7400BE2582 /* Sources */,
+				D9DD030A244FAF7400BE2582 /* Frameworks */,
+				D9DD030B244FAF7400BE2582 /* Resources */,
+				6975CBFABF165058060E2716 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9DD0313244FAF7400BE2582 /* PBXTargetDependency */,
+			);
+			name = PlantifyTests;
+			productName = PlantifyTests;
+			productReference = D9DD030D244FAF7400BE2582 /* PlantifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9C26F49C229316DC00BDEA59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = earine;
 				TargetAttributes = {
 					9C26F4A3229316DC00BDEA59 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					D9DD030C244FAF7400BE2582 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9C26F4A3229316DC00BDEA59;
 					};
 				};
 			};
@@ -589,6 +656,7 @@
 			projectRoot = "";
 			targets = (
 				9C26F4A3229316DC00BDEA59 /* Plantify */,
+				D9DD030C244FAF7400BE2582 /* PlantifyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,9 +688,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9DD030B244FAF7400BE2582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6975CBFABF165058060E2716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlantifyTests/Pods-PlantifyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlantifyTests/Pods-PlantifyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlantifyTests/Pods-PlantifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A5CED29914362B29BBDB62E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,6 +744,28 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Plantify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6498130821E82B28AF86388 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlantifyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -733,7 +847,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9DD0309244FAF7400BE2582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DD0318244FB0D800BE2582 /* OrdersTableViewTest.swift in Sources */,
+				D9DD0310244FAF7400BE2582 /* PlantifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9DD0313244FAF7400BE2582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C26F4A3229316DC00BDEA59 /* Plantify */;
+			targetProxy = D9DD0312244FAF7400BE2582 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9C26F4B0229316DD00BDEA59 /* LaunchScreen.storyboard */ = {
@@ -901,6 +1032,50 @@
 			};
 			name = Release;
 		};
+		D9DD0314244FAF7400BE2582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E032672F8D705E710F8C613B /* Pods-PlantifyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BV7G443SR;
+				INFOPLIST_FILE = PlantifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.earine.PlantifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plantify.app/Plantify";
+			};
+			name = Debug;
+		};
+		D9DD0315244FAF7400BE2582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C99ADBF019E2DEE539F538 /* Pods-PlantifyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BV7G443SR;
+				INFOPLIST_FILE = PlantifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.earine.PlantifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plantify.app/Plantify";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -918,6 +1093,15 @@
 			buildConfigurations = (
 				9C26F4B7229316DD00BDEA59 /* Debug */,
 				9C26F4B8229316DD00BDEA59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9DD0316244FAF7400BE2582 /* Build configuration list for PBXNativeTarget "PlantifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9DD0314244FAF7400BE2582 /* Debug */,
+				D9DD0315244FAF7400BE2582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -22,4 +22,10 @@ end
 
 target 'Plantify' do
   required_pods
+  
+  target 'PlantifyTests' do
+      inherit! :search_paths
+      required_pods
+  end
+  
 end

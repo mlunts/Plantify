@@ -14,7 +14,7 @@ class OrdersCollectionViewController: BaseViewController {
     
     var orders: [Order]!
     
-    @IBOutlet private weak var ordersCollectionView: UICollectionView!
+    @IBOutlet weak var ordersCollectionView: UICollectionView!
     
     // MARK: - override
     

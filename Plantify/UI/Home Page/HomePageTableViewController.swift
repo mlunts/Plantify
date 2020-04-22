@@ -15,7 +15,7 @@ class HomePageTableViewController: BaseViewController {
     private var image: UIImage!
     private var recentFlowersHeight: CGFloat = 120
     
-    @IBOutlet private weak var homePageTableView: UITableView!
+    @IBOutlet weak var homePageTableView: UITableView!
     
     // MARK: - override
     
