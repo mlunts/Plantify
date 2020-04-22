@@ -9,7 +9,7 @@
 import Moya
 
 enum ClassifyRoute {
-    case classifyFlower(imageData: String)
+    case classifyFlower(image: UIImage)
 }
 
 extension ClassifyRoute: TargetType {
@@ -38,8 +38,12 @@ extension ClassifyRoute: TargetType {
     
     var task: Task {
         switch self {
-        case .classifyFlower(let data):
-            return .requestParameters(parameters: ["imageFile": data], encoding: JSONEncoding.default)
+        case .classifyFlower(let image):
+            let imageData = image.jpegData(compressionQuality: 1.0)
+            
+            let formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData!), name: "imageFile", fileName: "user.jpeg", mimeType: "image/jpeg")]
+            
+            return .uploadMultipart(formData)
         }
     }
     
