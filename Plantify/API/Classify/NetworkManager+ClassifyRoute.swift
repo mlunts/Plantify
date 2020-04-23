@@ -11,7 +11,7 @@ import Moya
 extension NetworkManager {
     
     // MARK: - public
-    func classifyFlower(from imageData: String, onSuccess success: @escaping (_ flower: Flower?, _ response: Response?) -> Void, onFailure failure: @escaping ErrorWithVoid) {
-        requestObject(ClassifyRoute.classifyFlower(imageData: imageData), onSuccess: success, onFailure: failure)
+    func classifyFlower(from image: Image, onSuccess success: @escaping (_ flower: Flower?, _ response: Response?) -> Void, onFailure failure: @escaping ErrorWithVoid) {
+        requestObject(ClassifyRoute.classifyFlower(image: image), onSuccess: success, onFailure: failure)
     }
 }

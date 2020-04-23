@@ -12,11 +12,4 @@ class Order: Codable {
     let name: String
     let imageFilename: String
     let flowers: [Flower]
-//    init(name: String, image: UIImage, backgroundColor: UIColor) {
-//        self.name = name
-//        self.image = image
-//        self.backgroundColor = backgroundColor
-//    }
-    
-    
 }

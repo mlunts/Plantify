@@ -79,10 +79,7 @@ class HomePageTableViewController: BaseViewController {
     }
     
     private func classifyFlower() {
-        let imageData = image.jpegData(compressionQuality: 1.0)
-        let imageStr = imageData?.base64EncodedString()
-        
-        NetworkManager.shared.classifyFlower(from: imageStr!, onSuccess: { [weak self] (flower, _) in
+        NetworkManager.shared.classifyFlower(from: image, onSuccess: { [weak self] (flower, _) in
             guard let flower = flower else {
                 self?.alert(message: L10n.errorNoClassifiedFlower, title: L10n.errorOops)
                 return
@@ -169,7 +166,6 @@ extension HomePageTableViewController: HeaderTableViewCellDelegate {
     func presentIdentifierDialogWindow() {
         presentDialogWindow()
     }
-    
 }
 
 extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {
