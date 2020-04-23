@@ -166,7 +166,6 @@ extension HomePageTableViewController: HeaderTableViewCellDelegate {
     func presentIdentifierDialogWindow() {
         presentDialogWindow()
     }
-    
 }
 
 extension HomePageTableViewController: RecentFlowersTableViewCellDelegate {

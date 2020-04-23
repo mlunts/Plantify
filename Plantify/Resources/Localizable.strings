@@ -29,6 +29,7 @@
 "plantInfoTaxonomyHeaderTribe" = "Tribe:";
 "plantInfoTaxonomyHeaderBotanicalName" = "Botanical name:";
 "plantInfoTaxonomyHeaderUses" = "General uses:";
+"plantInfoPlant" = "Plant:";
 
 // Orders
 "ordersPageHeader" = "Orders";
@@ -36,3 +37,6 @@
 // Plants
 "plantsPageNotFound" = "No flowers have been found";
 
+// Search
+"searchPageHeader" = "Search";
+"searchPageNoFoundError" = "No results";

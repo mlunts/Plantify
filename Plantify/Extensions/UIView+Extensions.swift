@@ -82,14 +82,4 @@ extension UIView {
         addOrReplaceLayer(with: CALayer.shadowLayerConstant, newLayer: shadowLayer)
     }
 
-//    @discardableResult
-//    func fromNib<T: UIView>() -> T! {
-//        let contentView = (Bundle(for: type(of: self)).loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)!.first as? T)!.then {
-//            addSubview($0)
-//            $0.snp.makeConstraints { (maker) in
-//                maker.edges.equalToSuperview()
-//            }
-//        }
-//        return contentView
-//    }
 }

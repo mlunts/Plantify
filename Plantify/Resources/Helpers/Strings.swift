@@ -43,6 +43,8 @@ internal enum L10n {
   internal static let ordersPageHeader = L10n.tr("Localizable", "ordersPageHeader")
   /// Not poisoned
   internal static let plantInfoNotPoisoned = L10n.tr("Localizable", "plantInfoNotPoisoned")
+  /// Plant:
+  internal static let plantInfoPlant = L10n.tr("Localizable", "plantInfoPlant")
   /// Poisoned
   internal static let plantInfoPoisoned = L10n.tr("Localizable", "plantInfoPoisoned")
   /// Botanical name:
@@ -57,6 +59,10 @@ internal enum L10n {
   internal static let plantInfoTaxonomyHeaderUses = L10n.tr("Localizable", "plantInfoTaxonomyHeaderUses")
   /// No flowers have been found
   internal static let plantsPageNotFound = L10n.tr("Localizable", "plantsPageNotFound")
+  /// Search
+  internal static let searchPageHeader = L10n.tr("Localizable", "searchPageHeader")
+  /// No results
+  internal static let searchPageNoFoundError = L10n.tr("Localizable", "searchPageNoFoundError")
   /// Take Photo
   internal static let takePhoto = L10n.tr("Localizable", "takePhoto")
   /// Please,wait...

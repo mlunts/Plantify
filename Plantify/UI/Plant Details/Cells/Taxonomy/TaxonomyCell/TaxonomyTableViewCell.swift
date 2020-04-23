@@ -12,7 +12,7 @@ class TaxonomyTableViewCell: UITableViewCell {
 
     // MARK: - properties
     
-    private var headings = [L10n.plantInfoTaxonomyHeaderOrder, L10n.plantInfoTaxonomyHeaderFamily, L10n.plantInfoTaxonomyHeaderTribe, L10n.plantInfoTaxonomyHeaderBotanicalName, L10n.plantInfoTaxonomyHeaderUses]
+    private var headings = [L10n.plantInfoTaxonomyHeaderOrder, L10n.plantInfoTaxonomyHeaderFamily, L10n.plantInfoTaxonomyHeaderTribe, L10n.plantInfoTaxonomyHeaderBotanicalName, L10n.plantInfoTaxonomyHeaderUses, L10n.plantInfoPlant]
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var headingLabel: UILabel!
@@ -21,6 +21,8 @@ class TaxonomyTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        selectionStyle = .none
     }
 
     // MARK: - public
