@@ -13,7 +13,7 @@ class FlowerTableViewCell: UITableViewCell {
     // MARK: - properties
     
     @IBOutlet private  weak var flowerImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet private weak var subTitleLabel: UILabel!
     
     // MARK: - override
@@ -35,7 +35,7 @@ class FlowerTableViewCell: UITableViewCell {
     func setContent(with flower: Flower) {
         nameLabel.text = flower.name
         subTitleLabel.text = flower.information
-        flowerImageView.setCustomImage(flower.imageFilename)
+//        flowerImageView.setCustomImage(flower.imageFilename)
     }
     
     // MARK: - private
