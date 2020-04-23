@@ -63,6 +63,9 @@
 		D9D6DD5623E9C5B5008C8DC0 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6DD5523E9C5B5008C8DC0 /* HomePageTableViewController.swift */; };
 		D9D6DD5C23E9D098008C8DC0 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6DD5A23E9D098008C8DC0 /* HeaderTableViewCell.swift */; };
 		D9D6DD5D23E9D098008C8DC0 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D6DD5B23E9D098008C8DC0 /* HeaderTableViewCell.xib */; };
+		D9DD03202451161200BE2582 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD031F2451161200BE2582 /* SearchViewController.swift */; };
+		D9DD03222451161B00BE2582 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DD03212451161B00BE2582 /* Search.storyboard */; };
+		D9DD03242451165100BE2582 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD03232451165100BE2582 /* SearchTableViewController.swift */; };
 		D9E1DAD323EADBEA00368EE9 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD223EADBEA00368EE9 /* UITableView+Extensions.swift */; };
 		D9E1DAD623EADCFB00368EE9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */; };
 		D9E1DAD823EAE25200368EE9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */; };
@@ -138,6 +141,9 @@
 		D9D6DD5523E9C5B5008C8DC0 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
 		D9D6DD5A23E9D098008C8DC0 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		D9D6DD5B23E9D098008C8DC0 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		D9DD031F2451161200BE2582 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D9DD03212451161B00BE2582 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		D9DD03232451165100BE2582 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D9E1DAD223EADBEA00368EE9 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		D9E1DAD523EADCFB00368EE9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D9E1DAD723EAE25100368EE9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				D9D6DD5023E99EBA008C8DC0 /* Home Page */,
 				D904274D244E2A13001CD016 /* Orders Page */,
 				D9042754244E4ADF001CD016 /* Plants Page */,
+				D9DD031E245115E500BE2582 /* Search */,
 				D9A633B323F80B3800801AE7 /* Plant Details */,
 			);
 			path = UI;
@@ -475,6 +482,16 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		D9DD031E245115E500BE2582 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D9DD031F2451161200BE2582 /* SearchViewController.swift */,
+				D9DD03232451165100BE2582 /* SearchTableViewController.swift */,
+				D9DD03212451161B00BE2582 /* Search.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		D9E1DAD123EADBCD00368EE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,6 +624,7 @@
 				9C26F4AF229316DD00BDEA59 /* Assets.xcassets in Resources */,
 				D9042751244E2A4E001CD016 /* Orders.storyboard in Resources */,
 				D9A00C9E23EE0D7F00ED153E /* RecentFlowersTableViewCell.xib in Resources */,
+				D9DD03222451161B00BE2582 /* Search.storyboard in Resources */,
 				D99E8C77244F355D00EE1C3D /* TaxonomyTableViewCell.xib in Resources */,
 				D9A633CC23F980B300801AE7 /* PlantDescriptionTableViewCell.xib in Resources */,
 				D9A633C823F957A300801AE7 /* PlantTitleTableViewCell.xib in Resources */,
@@ -700,6 +718,7 @@
 				D9A633BB23F8149A00801AE7 /* PlantDetailsTableViewController.swift in Sources */,
 				D9CC5275244CCA5D00846994 /* FlowerRoute.swift in Sources */,
 				D9A633B923F8107200801AE7 /* Scene.swift in Sources */,
+				D9DD03242451165100BE2582 /* SearchTableViewController.swift in Sources */,
 				D9BDA727244B256E0088C80A /* Environment.swift in Sources */,
 				D9A633C223F94F2A00801AE7 /* PlantImageTableViewCell.swift in Sources */,
 				D99E8C7A244F4C3300EE1C3D /* String+Extensions.swift in Sources */,
@@ -725,6 +744,7 @@
 				D9E1DAE523EB575E00368EE9 /* ExploreTableViewCell.swift in Sources */,
 				D9E1DAD823EAE25200368EE9 /* UIView+Extensions.swift in Sources */,
 				D9D6DD5423E9A044008C8DC0 /* HomePageViewController.swift in Sources */,
+				D9DD03202451161200BE2582 /* SearchViewController.swift in Sources */,
 				D9A633D823F98FC400801AE7 /* BasicInformationCollectionViewCell.swift in Sources */,
 				D9D6DD5C23E9D098008C8DC0 /* HeaderTableViewCell.swift in Sources */,
 				D9A00C9D23EE0D7F00ED153E /* RecentFlowersTableViewCell.swift in Sources */,

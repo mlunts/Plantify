@@ -47,6 +47,13 @@ internal enum StoryboardScene {
 
     internal static let plantsViewController = SceneType<Plantify.PlantsViewController>(storyboard: Plants.self, identifier: "PlantsViewController")
   }
+  internal enum Search: StoryboardType {
+    internal static let storyboardName = "Search"
+
+    internal static let searchTableViewController = SceneType<Plantify.SearchTableViewController>(storyboard: Search.self, identifier: "SearchTableViewController")
+
+    internal static let searchViewController = SceneType<Plantify.SearchViewController>(storyboard: Search.self, identifier: "SearchViewController")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 
