@@ -55,7 +55,6 @@
 		D9CC5275244CCA5D00846994 /* FlowerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC5274244CCA5D00846994 /* FlowerRoute.swift */; };
 		D9CC5277244CCB2400846994 /* NetworkManager+Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC5276244CCB2400846994 /* NetworkManager+Flower.swift */; };
 		D9CC527A244CCB9400846994 /* OrdersListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC5279244CCB9400846994 /* OrdersListRoute.swift */; };
-		D9CC527C244CCD3900846994 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC527B244CCD3900846994 /* UIImage+Extensions.swift */; };
 		D9D6DD3223E997B7008C8DC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9D6DD3123E997B7008C8DC0 /* Localizable.strings */; };
 		D9D6DD4F23E99CE1008C8DC0 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6DD4E23E99CE1008C8DC0 /* Assets.swift */; };
 		D9D6DD5223E99EE5008C8DC0 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D6DD5123E99EE5008C8DC0 /* HomePage.storyboard */; };
@@ -130,7 +129,6 @@
 		D9CC5274244CCA5D00846994 /* FlowerRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerRoute.swift; sourceTree = "<group>"; };
 		D9CC5276244CCB2400846994 /* NetworkManager+Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Flower.swift"; sourceTree = "<group>"; };
 		D9CC5279244CCB9400846994 /* OrdersListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListRoute.swift; sourceTree = "<group>"; };
-		D9CC527B244CCD3900846994 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		D9D6DD3123E997B7008C8DC0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D9D6DD4E23E99CE1008C8DC0 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		D9D6DD5123E99EE5008C8DC0 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -484,7 +482,6 @@
 				D9E1DAEE23EC9E4F00368EE9 /* UICollectionView+Extensions.swift */,
 				D9A633BC23F816E600801AE7 /* UIViewController+Extensions.swift */,
 				D90B233A23F0443E0098EBB3 /* UIImageView+Extensions.swift */,
-				D9CC527B244CCD3900846994 /* UIImage+Extensions.swift */,
 				D99E8C79244F4C3300EE1C3D /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -688,7 +685,6 @@
 				D904275A244E4B14001CD016 /* PlantsViewController.swift in Sources */,
 				D9A633D223F98CD900801AE7 /* PlantBasicInformationTableViewCell.swift in Sources */,
 				D9CC5271244B394D00846994 /* NetworkManager+OrdersList.swift in Sources */,
-				D9CC527C244CCD3900846994 /* UIImage+Extensions.swift in Sources */,
 				D90B233B23F0443E0098EBB3 /* UIImageView+Extensions.swift in Sources */,
 				D9A00C9923EDA6F500ED153E /* RecentFlowersManager.swift in Sources */,
 				D99E8C80244F51B200EE1C3D /* NetworkManager+ClassifyRoute.swift in Sources */,

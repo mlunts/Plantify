@@ -28,14 +28,14 @@ class ExploreOrdersCollectionViewCell: UICollectionViewCell {
     
     func setContent(with order: Order) {
         familyNameLabel.text = order.name
-        flowerImageView.image = UIImage().getImage(from: order.imageFilename)
+        flowerImageView.setCustomImage(order.imageFilename)
         
         backgroundColor = ColorRandomiser().getColor()
     }
 
     // MARK: - private
     
-    func setStyle() {
+    private func setStyle() {
         flowerImageView.dropShadow(shadowOffset: CGSize(width: 0, height: 1.0), shadowOpacity: 0.2, shadowRadius: 3, shadowColor: .black)
     }
 }

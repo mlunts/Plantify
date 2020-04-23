@@ -38,7 +38,7 @@ class RecentFlowersManager {
     
     // MARK: - private
     
-    private func isPlantExist(_ flowers: [Flower], selectedFlower: Flower) -> Bool {
-        return flowers.contains(where: { $0.id == selectedFlower.id })
+    private func isPlantExist(selectedFlower: Flower) -> Bool {
+        return flowers?.contains(where: { $0.id == selectedFlower.id }) ?? false
     }
 }
