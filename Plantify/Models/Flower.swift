@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Flower: Codable {
+class Flower: Codable {
     
     var id: Int
     var name: String
@@ -24,6 +24,21 @@ struct Flower: Codable {
     var type: String
     var imageFilename: String
     
+    init() {
+        self.id = 0
+        self.name = ""
+        self.botanicalName = ""
+        self.information = ""
+        self.toxicities = ""
+        self.uses = ""
+        self.tribeName = ""
+        self.familyName = ""
+        self.orderName = ""
+        self.seasons = ""
+        self.imageFilename = ""
+        self.type = ""
+    }
+
     // MARK: - public
     
     func poisonedString() -> String {

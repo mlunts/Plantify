@@ -32,6 +32,7 @@ class PlantifyTests: XCTestCase {
                 XCTFail("Error not covered by previous asserts.")
         })
         
+        XCTAssertTrue(NetworkManager.baseServerPath == Environment.baseServerPath)
     }
     
     func testStringExtension() throws {
@@ -43,38 +44,37 @@ class PlantifyTests: XCTestCase {
     
     func testImageExtension() throws {
         let url = "https://miro.medium.com/max/992/1*mmf6CZBeAj2w0BW7xwynLQ.png"
-        let image = UIImage().getImage(from: url)
-        
-        XCTAssertNotNil(image)
-        
+        let imageview = UIImageView()
         let brokenUrl = "https://miro.medium.com/max/992/1*mmf6CZBeAj2w0BW7xwynLQ.ng"
-        let brokenImage = UIImage().getImage(from: brokenUrl)
+        let brokenImageview = UIImageView()
         
-        XCTAssertEqual(brokenImage, Asset.default.image)
+        DispatchQueue.global().async { [weak self] in
+            DispatchQueue.main.async {
+                imageview.setCustomImage(url)
+                brokenImageview.setCustomImage(brokenUrl)
+                brokenImageview.setCustomImage("")
+            }
+        }
     }
     
     func testFlower() throws {
-        let emptyFlower = Flower()
-        XCTAssertTrue(emptyFlower.isObjectEmpty())
-        
         let flower = Flower()
         
         XCTAssertEqual(L10n.plantInfoPoisoned, flower.poisonedString())
-        XCTAssertNotNil(flower.getTaxonomy())
     }
     
     func testFlowerCountInCache() throws {
-        var flower = Flower()
+        let flower = Flower()
         flower.id = 1
-        var flower2 = Flower()
+        let flower2 = Flower()
         flower2.id = 2
-        var flower3 = Flower()
+        let flower3 = Flower()
         flower3.id = 3
-        var flower4 = Flower()
+        let flower4 = Flower()
         flower4.id = 4
-        var flower5 = Flower()
+        let flower5 = Flower()
         flower5.id = 5
-        var flower6 = Flower()
+        let flower6 = Flower()
         flower6.id = 6
         
         RecentFlowersManager.shared.addFlower(flower)
@@ -93,11 +93,49 @@ class PlantifyTests: XCTestCase {
         XCTAssertNotNil(ColorRandomiser().getColor())
     }
     
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testFetchFlowerById() throws {
+        let expectation = XCTestExpectation(description: "ready")
+        NetworkManager.shared.getFlower(by: 1, onSuccess: { [weak self] (flower, _) in
+            guard let flower = flower else {
+                return
+            }
+            XCTAssertTrue(flower.name == "Gladiolus")
+            expectation.fulfill()
+            
+            }, onFailure: { [weak self] (error, _) in
+                XCTFail("Error not covered by previous asserts.")
+        })
+        
+        XCTAssertTrue(NetworkManager.baseServerPath == Environment.baseServerPath)
     }
     
+    func testClassification() throws {
+        let expectation = XCTestExpectation(description: "ready")
+        let image = Asset.rose.image
+        NetworkManager.shared.classifyFlower(from: image, onSuccess: { [weak self] (flower, _) in
+            guard let flower = flower else {
+                return
+            }
+            XCTAssertTrue(flower.name == "Rose")
+            expectation.fulfill()
+            
+            }, onFailure: { [weak self] (error, _) in
+                XCTFail("Error not covered by previous asserts.")
+        })
+        
+        XCTAssertTrue(NetworkManager.baseServerPath == Environment.baseServerPath)
+    }
+    
+    func testBaseViewController() {
+        let vc = BaseViewController()
+        vc.alert(message: "Wait")
+        vc.alert(message: "W", title: "T")
+        vc.showActivityIndicator(true)
+        vc.showActivityIndicator(false)
+        vc.showWaitingAlert()
+        vc.hideWaitingAlert()
+    }
+
+
 }
+

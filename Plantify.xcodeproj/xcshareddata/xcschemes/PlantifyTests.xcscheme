@@ -32,6 +32,11 @@
                BlueprintName = "PlantifyTests"
                ReferencedContainer = "container:Plantify.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "PlantifyTests/testPlantBasicInformationTableViewCell()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
