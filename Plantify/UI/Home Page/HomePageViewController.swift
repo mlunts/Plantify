@@ -28,4 +28,9 @@ class HomePageViewController: BaseViewController {
         setupNavigationMultilineTitle()
     }
 
+    @IBAction private func searchButtonClicked(_ sender: Any) {
+        let vc = SearchViewController.instantiate()
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
